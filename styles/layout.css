@@ -1,0 +1,109 @@
+.columns {
+	overflow: hidden;
+}
+
+.column {
+	float: left;
+}
+
+.columns.two .column:first-child {
+	width: 656px;
+    margin-right: 32px;
+}
+
+.column>div.onsale {
+	border: 1px solid #DFDFDF;
+	border-radius: 5px;
+	background-color: #fff;
+	padding: 15px;
+	overflow: hidden;
+}
+
+.guidelinks {
+	position:relative;
+	top:15px;
+}
+
+.guidelinks ul {
+	padding-left:11px;
+}
+
+.guidelinks ul li {
+	list-style-type: none;
+}
+
+.guidelinks ul li a {
+	display:inline-block;
+	margin-right:5px;
+	padding-left:22px;
+	background:url(/images/go.png) center left no-repeat;
+}
+
+.guidelinks ul li a:hover {
+	background-image:url(/images/go_hover.png);
+}
+
+.guidelinks>a {
+	font-size: 80%;
+	position: relative;
+	top: 10px;
+	left: 35px;
+}
+
+.tryit {
+	position:relative;
+	margin:0 auto;
+	width: 144px;
+	padding-bottom: 20px;
+	padding-top: 40px;
+}
+
+.tryit .steps {
+	display:hidden;
+	opacity:0;
+	-webkit-transition: opacity .5s ease-in;
+	-moz-transition: opacity .5s ease-in;
+}
+
+.tryit:hover .steps {
+	display:block;
+	opacity: .9;
+}
+
+.steps .one {
+	float: left;
+	padding-left: 15px;
+	padding-top: 6px;
+	font-size:85%;
+	
+}
+
+.steps .two {
+	float: right;
+	padding-right: 15px;
+	padding-top: 6px;
+	font-size:85%;
+}
+
+a.runguide {
+	color:white !important;
+	text-decoration:none !important;
+	font-weight:bold;
+}
+
+.columns.two .sidebar {
+	float: right;
+	width: 220px;
+	margin-top: 50px;
+}
+
+.columns .go-to-top {
+	position: absolute;
+	bottom: 20px;
+	right: 0;
+	width: 200px;
+	text-align: right;
+}
+
+
+

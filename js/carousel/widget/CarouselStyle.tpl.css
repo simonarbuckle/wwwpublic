@@ -1,0 +1,46 @@
+{CSSTemplate {
+	$classpath: "js.carousel.widget.CarouselStyle"
+}}
+
+	{macro main()}
+
+    {var transition="left "+js.carousel.widget.Carousel.TRANSITIONCSS/}
+
+div.mywlibCarousel {
+    overflow: hidden;
+    position: relative; /* otherwise overflow will not be hidden in IE */
+}
+
+div.mywlibCarousel ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 9999px;
+}
+
+div.caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    color: white;
+    font-size: 12pt;
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+    z-index: 9999;
+}
+
+div.mywlibCarousel ul.anim {
+    transition: ${transition};
+    -moz-transition: ${transition};
+    -webkit-transition: ${transition};
+    -o-transition: ${transition};
+}
+
+div.mywlibCarousel li {
+    display:inline;
+}
+
+	{/macro}
+
+{/CSSTemplate}
