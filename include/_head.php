@@ -8,8 +8,8 @@
 <link title="AriaTemplates" href="/fluidicon.png" rel="fluid-icon"/>
 <link rel="stylesheet" href="/styles/all.css" type="text/css"/>
 <script type="text/javascript">//Aria={debug:true}</script>
-<script type="text/javascript" src="/aria/aria-templates-1.3-4.js"></script>
-<script type="text/javascript" src="/css/atwiki-1.3-4.js"></script>
+<script type="text/javascript" src="/aria/aria-templates-1.3-7.js"></script>
+<script type="text/javascript" src="/css/atwiki-1.3-7.js"></script>
 
 <!--[if lt IE 9]>
 <script type="text/javascript" src="/js/iemap.js"></script>
