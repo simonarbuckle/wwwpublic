@@ -36,7 +36,7 @@ article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,sec
 nav ul{list-style:none outside none}
 pre{margin-bottom:1em}
 html{height:100%;background-color:#ededed}
-body{font:14px/1.4em "Helvetica Neue",Arial,"Lucida Grande",sans-serif;background:#f8f8f8 url(../images/bg-top5.png) left top repeat-x;color:#444}
+body{font:14px "Helvetica Neue",Arial,"Lucida Grande",sans-serif;background:#f8f8f8 url(../images/bg-top5.png) left top repeat-x;color:#444}
 h1,h2,h3,h4,h5,h6{line-height:1em;margin:10px 0;font-family:'Ubuntu',sans-serif;font-style:normal;text-rendering:optimizelegibility}
 h1{font-size:40px;font-weight:400;color:#bfd730}
 h2{font-size:32px;font-style:normal;font-weight:700;color:#5092bd}
