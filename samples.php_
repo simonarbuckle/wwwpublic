@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<?php include 'include/_head.php' ?>
+		<script type="text/javascript" src="/js/top-scrolling.js"></script>
+	</head>
+	<body class="documentation">
+		<div id="top"><a href="#top"></a></div>
+		<?php include 'include/_header.php' ?>
+		<div class="content-wrapper">
+			<section class="content">
+				<div class="wrapper">
+					<div class="columns main-page">
+						<article class="column">
+							<a href="top"></a>
+							<h1>Samples</h1>
+							<p>These are the samples grouped by articles.</p>
+							<p></p>
+
+
+							<div id="scrollMenu" class="up">
+								<div>
+									<a href="#top" onclick="smoothScroll('top');return false">Top</a>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+		</div>
+		<?php include 'include/_footer.html' ?>
+	</body>
+</html>
