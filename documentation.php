@@ -14,8 +14,8 @@
 							<h3>User Manual</h3>
 							<p>The User Manual is the main Aria Templates documentation.  You'll find plenty of articles explaining the features of the framework along with samples illustrating them.
 							<p><a href="/usermanual">Check out the User Manual</a></p>
-							<p>We also have a page listing all the samples used to illustrate the articles of the user manual.
-							<p><a href="/samples">Browse the samples</a></p>
+							<!--p>We also have a page listing all the samples used to illustrate the articles of the user manual.
+							<p><a href="/samples">Browse the samples</a></p-->
 							<h3>Api documentation</h3>
 							Our user-friendly API reference.
 							<a href="aria/guide/apps/apidocs/">Check out the API Reference</a>.</p>
@@ -29,14 +29,12 @@
 						<aside class="column sidebar">
 							<div class="search">
 								<h4>Search documentation</h4>
-								<form action="/usermanual/Special:Search">
-									<input type="hidden" name="fulltext" value="Search">
-									<input type="hidden" name="ns0" value="1"/>
-									<input type="text" id="search" name="search" value=""/>
+								<form action="/usermanual/search/" method="get">
+									<input type="text" id="search" name="q" value="" autocomplete="off" spellcheck="false"/>
 									<button onclick="javascript:if(document.getElementById('search').value == '') return false;">Search</button>
 								</form>
 							</div>
-							
+
 							<div class="onsale">
 								<h5>Contributions</h5>
 								<p>You feel comfortable with Aria Templates and have a great idea about something awesome?</p>
