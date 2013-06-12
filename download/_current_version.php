@@ -1,10 +1,10 @@
 <?php
 	$prod = array(
-		"version" => "1.3.6",
-		"date" => "25/02/2013");
+		"version" => "1.4.4",
+		"date" => "22/05/2013");
 	$dev = array(
-		"version" => "1.3.6",
-		"date" => "25/02/2013");
+		"version" => "1.4.4",
+		"date" => "22/05/2013");
 
 	function human_filesize($bytes, $decimals = 2) {
   	$sz = array('B','Kb', 'Mb', 'Gb', 'Tb', 'Pb');
