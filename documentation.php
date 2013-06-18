@@ -38,7 +38,7 @@
 							<div class="onsale">
 								<h5>Contributions</h5>
 								<p>You feel comfortable with Aria Templates and have a great idea about something awesome?</p>
-								<p>Feel free to <a href="/contact">contact us</a>, or <a href="/contribute">fork us</a> on Github and open a pull request to push our changes.</p>
+								<p>Feel free to <a href="/about/contact">contact us</a>, or <a href="/contribute">fork us</a> on Github and open a pull request to push our changes.</p>
 							</div>
 						</aside>
 						<!--a class="go-to-top" href="">Top of page</a-->

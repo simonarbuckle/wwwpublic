@@ -57,7 +57,7 @@
 								<li>
 									<h3>How do I create my first project?</h3>
 									<p>
-										You'll first need to <a href="/download">download a copy of the framework here</a>, then you can either download one of the existing <a href="/guides">guides</a> or start from one of the <a href="/samples">samples</a>.  To start a new project from scratch, install the <a href="/usermanual/Atgen">Atgen</a> utility.
+										You'll first need to <a href="/download">download a copy of the framework here</a>, then you can download one of the existing <a href="/guides">guides</a><!-- or start from one of the <a href="/samples">samples</a>-->.  To start a new project from scratch, install the <a href="/usermanual/latest/atgen">Atgen</a> utility.
 									</p>
 								</li>
 								<li>
@@ -106,7 +106,7 @@
 									<p>
 										Chances are that your controller implements an init() method that doesn't complete properly.  Remember that, because init can be implemented asynchronously, the framework has no way to tell when it finishes.  To state that you're done, your init method must at one point call back the framework like this:
 										<pre>this.$callback(cb);</pre>
-										The callback pattern is explained <a href="/usermanual/Working_in_an_Asynchronous_World">here</a>.
+										The callback pattern is explained <a href="/usermanual/latest/working_in_an_asynchronous_world">here</a>.
 									</p>
 								</li>
 							</ul>

@@ -267,7 +267,7 @@ Aria.<span style="color: #F8F8F8;">loadTemplate</span><span style="color: #F8F8F
 &nbsp; &nbsp; <span style="color: #F8F8F8;">}</span><br>
 &nbsp; <span style="color: #F8F8F8;">}</span><br>
 <span style="color: #F8F8F8;">}</span></div></div></div>
-									<p class="note"><b>Note:</b> To get more info about the onModuleEvent take a look at <a href="/usermanual/Template_Scripts#Reacting_to_module_and_flow_events">this page</a>.</p>
+									<p class="note"><b>Note:</b> To get more info about the onModuleEvent take a look at <a href="/usermanual/latest/template_scripts#reacting-to-module-and-flow-events">this page</a>.</p>
 									Define the <code>onScroll()</code> function to manage the vertical and horizontal scroll inside the dataset table:
 									<div class="wp_syntax"><div class="code"><div class="at" style="font-family:monospace;">&nbsp;<span style="color: #FFFF80">/**<br>
 &nbsp; * Event Handler called when a scrollbar is used<br>

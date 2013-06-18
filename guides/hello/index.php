@@ -65,7 +65,7 @@ Aria.<span style="color: #F8F8F8;">loadTemplate</span><span style="color: #F8F8F
 <span style="color: #F8F8F8;">}</span><span style="color: #F8F8F8;">)</span><span style="color: #F8F8F8">;</span><br>
 <span style="color: #F8F8F8">&lt;/</span>script<span style="color: #F8F8F8">&gt;</span></div></div></div>
 									In this case we have defined also the data model inside the <code>Aria.loadTemplate()</code> function using the <code>data</code> object.<br/>
-									To have more info about how to load a template take a look at <a href="../usermanual/What_are_Templates%3F#Loading_templates">this article</a>.
+									To have more info about how to load a template take a look at <a href="/usermanual/latest/what_are_templates#loading-templates">this article</a>.
 									<h4>Step 3</h4>
 									<p>Create a file and call it <i><b>Hello.tpl</b></i>. This is the template that will be used to display the message "Hello World".</p>
 									<p>Save it inside the view folder inside your project (<code>/guides/hello/sample_1/view/</code>).</p>
@@ -82,7 +82,7 @@ Aria.<span style="color: #F8F8F8;">loadTemplate</span><span style="color: #F8F8F
 
 									<h4>Step 5</h4>
 									<p><strong>That's it!</strong> Open the <code>index.html</code> with your favourite browser (e.g. Chrome) and enjoy.</p>
-									<p class="note"><b>Note:</b> If you have a doubt about the template syntax please take a look at <a href="/usermanual/What_are_Templates%3F#Templates_syntax">this page</a>.</p>
+									<p class="note"><b>Note:</b> If you have a doubt about the template syntax please take a look at <a href="/usermanual/latest/what_are_templates#templates-syntax">this page</a>.</p>
 								</div>
 								<div class="content">
 									<h3>Tutorial Hello World - Sample 2</h3>
@@ -178,7 +178,7 @@ $constructor <span style="color: #F8F8F8;">:</span> function <span style="color:
 &nbsp; <span style="color: #BBBEFF">var</span> detailsVisible<span style="color: #F8F8F8;">=</span><span style="color: #F8F8F8;">(</span>person<span style="color: #F8F8F8;">[</span><span style="color: #80FF00;">"data:detailsVisible"</span><span style="color: #F8F8F8;">]</span><span style="color: #F8F8F8;">==</span>true<span style="color: #F8F8F8;">)</span><span style="color: #F8F8F8;">;</span><br>
 &nbsp; aria.<span style="color: #F8F8F8;">utils</span>.<span style="color: #F8F8F8;">Json</span>.<span style="color: #F8F8F8;">setValue</span><span style="color: #F8F8F8;">(</span>person<span style="color: #F8F8F8;">,</span><span style="color: #80FF00;">"data:detailsVisible"</span><span style="color: #F8F8F8;">,!</span>detailsVisible<span style="color: #F8F8F8;">)</span><span style="color: #F8F8F8;">;</span><br>
 <span style="color: #F8F8F8;">}</span></div></div></div>
-									<p class="note"><b>Note:</b> If you have a doubt about the template script syntax please take a look at <a href="/usermanual/Template_Scripts">this page</a>.</p>
+									<p class="note"><b>Note:</b> If you have a doubt about the template script syntax please take a look at <a href="/usermanual/latest/template_scripts">this page</a>.</p>
 
 									<h4>Step 7</h4>
 									<p>Create a file and call it <i><b>HelloStyle.tpl.css</b></i>.</p>
@@ -186,7 +186,7 @@ $constructor <span style="color: #F8F8F8;">:</span> function <span style="color:
 
 									<h4>Step 8</h4>
 									Give some style to your app.
-									<p class="note"><b>Note:</b> If you have a doubt about the CSS template syntax please take a look at <a href="/usermanual/CSS_Templates">this page</a>.</p>
+									<p class="note"><b>Note:</b> If you have a doubt about the CSS template syntax please take a look at <a href="/usermanual/latest/css_templates">this page</a>.</p>
 
 									<h4>Step 9</h4>
 									<p><strong>That's it!</strong> Open the <code>index.html</code> with your favourite browser (e.g. Chrome) and enjoy.</p>

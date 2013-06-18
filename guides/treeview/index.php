@@ -135,7 +135,7 @@ Aria.<span style="color: #F8F8F8;">loadTemplate</span><span style="color: #F8F8F
 &nbsp; &nbsp; &nbsp; <span style="color: #F8F8F8;">{</span><span style="color: #F8F8F8;">/</span><span style="color: #BBBEFF">section</span><span style="color: #F8F8F8;">}</span><br>
 &nbsp; <span style="color: #F8F8F8;">{</span><span style="color: #F8F8F8;">/</span><span style="color: #BBBEFF">if</span><span style="color: #F8F8F8;">}</span><br>
 <span style="color: #F8F8F8;">{</span><span style="color: #F8F8F8;">/</span><span style="color: #BBBEFF">macro</span><span style="color: #F8F8F8;">}</span></div></div></div>
-									<p class="note"><b>Note:</b> To get more info about sections take a look at <a href="/usermanual/Writing_Templates#section">this page</a>.</p>
+									<p class="note"><b>Note:</b> To get more info about sections take a look at <a href="/usermanual/latest/writing_templates#section">this page</a>.</p>
 										
 									<h4>Step 5</h4>	
 									<p>Create a file and call it <i><b>MainScript.js</b></i>.</p>									
@@ -157,7 +157,7 @@ Aria.<span style="color: #F8F8F8;">loadTemplate</span><span style="color: #F8F8F
 &nbsp; &nbsp;<span style="color: #BBBEFF">var</span> expanded<span style="color: #F8F8F8;">=</span><span style="color: #F8F8F8;">(</span>mnu<span style="color: #F8F8F8;">[</span><span style="color: #80FF00;">"data:expanded"</span><span style="color: #F8F8F8;">]</span><span style="color: #F8F8F8;">==</span>true<span style="color: #F8F8F8;">)</span><span style="color: #F8F8F8;">;</span><br>
 &nbsp; &nbsp;aria.<span style="color: #F8F8F8;">utils</span>.<span style="color: #F8F8F8;">Json</span>.<span style="color: #F8F8F8;">setValue</span><span style="color: #F8F8F8;">(</span>mnu<span style="color: #F8F8F8;">,</span><span style="color: #80FF00;">"data:expanded"</span><span style="color: #F8F8F8;">,!</span>expanded<span style="color: #F8F8F8;">)</span><span style="color: #F8F8F8;">;</span><br>
 <span style="color: #F8F8F8;">}</span></div></div></div>
-											<p class="note"><b>Note:</b> If you have a doubt about the template script syntax please take a look at <a href="/usermanual/Template_Scripts">this page</a>.</p>
+											<p class="note"><b>Note:</b> If you have a doubt about the template script syntax please take a look at <a href="/usermanual/latest/template_scripts">this page</a>.</p>
 									
 									<h4>Step 7</h4>
 									<p>Create a file and call it <i><b>ControllerInterface.js</b></i>.</p>									
@@ -230,7 +230,7 @@ loadData <span style="color: #F8F8F8;">:</span> function <span style="color: #F8
 									
 									<h4>Step 12</h4>	
 									<p>Give some style to your todo app.</p>
-									<p class="note"><b>Note:</b> If you have a doubt about the CSS template syntax please take a look at <a href="/usermanual/CSS_Templates">this page</a>.</p>
+									<p class="note"><b>Note:</b> If you have a doubt about the CSS template syntax please take a look at <a href="/usermanual/latest/css_templates">this page</a>.</p>
 									
 									<h4>Step 13</h4>	
 									<p><strong>That's it!</strong> Open the <code>index.html</code> with your favourite browser (e.g. Chrome) and enjoy.</p>

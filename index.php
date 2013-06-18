@@ -65,7 +65,7 @@
 								<p>
 									<?php include 'download/_current_version.php' ?>
 								</p>
-								<p>You can also download one of our <a href="/guides">guides</a>, or try our <a href="/samples">samples</a></p>
+								<p>You can also download one of our <a href="/guides">guides</a>.<!--, or try our <a href="/samples">samples</a>--></p>
 							</div>
 							<h3>Cross Platform Browsers Compatibility</h3>
 							<div class="browsers">

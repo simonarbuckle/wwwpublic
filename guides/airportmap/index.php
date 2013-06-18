@@ -126,7 +126,7 @@ zoom<span style="color: #F8F8F8;">:</span>function<span style="color: #F8F8F8;">
 &nbsp; &nbsp; &nbsp;<span style="color: #F8F8F8;">}</span><br>
 &nbsp; &nbsp;<span style="color: #F8F8F8;">}</span><br>
 <span style="color: #F8F8F8;">}</span></div></div></div>
-									<p class="note"><b>Note:</b> To get more info about the onModuleEvent take a look at <a href="/usermanual/Template_Scripts#Reacting_to_module_and_flow_events">this page</a>.</p>
+									<p class="note"><b>Note:</b> To get more info about the onModuleEvent take a look at <a href="/usermanual/latest/template_scripts#reacting-to-module-and-flow-events">this page</a>.</p>
 									Display the map:
 									<div class="wp_syntax"><div class="code"><div class="at" style="font-family:monospace;">showMap<span style="color: #F8F8F8;">:</span>function<span style="color: #F8F8F8;">(</span>evt<span style="color: #F8F8F8;">)</span> <span style="color: #F8F8F8;">{</span><br>
 &nbsp; <span style="color: #BBBEFF">if</span> <span style="color: #F8F8F8;">(</span>this.<span style="color: #F8F8F8;">initialized</span><span style="color: #F8F8F8;">)</span> return<span style="color: #F8F8F8;">;</span> <span style="color: #666666">// otherwise we will create 2 papers (!)</span><br>

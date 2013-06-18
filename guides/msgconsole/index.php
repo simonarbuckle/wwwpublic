@@ -95,7 +95,7 @@ Aria.<span style="color: #F8F8F8;">loadTemplate</span><span style="color: #F8F8F
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #F8F8F8;">{</span><span style="color: #BBBEFF">call</span> pauseBtn<span style="color: #F8F8F8;">(</span><span style="color: #F8F8F8;">)</span><span style="color: #F8F8F8;">/</span><span style="color: #F8F8F8;">}</span><br>
 &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #F8F8F8;">&lt;/</span>td<span style="color: #F8F8F8;">&gt;&lt;/</span>tr<span style="color: #F8F8F8;">&gt;</span><br>
 <span style="color: #F8F8F8;">&lt;/</span>table<span style="color: #F8F8F8;">&gt;</span></div></div></div>
-									<p class="note"><b>Note:</b> To get more info about sections take a look at <a href="/usermanual/Writing_Templates#section">this page</a>.</p>
+									<p class="note"><b>Note:</b> To get more info about sections take a look at <a href="/usermanual/latest/writing_templates#section">this page</a>.</p>
 									Define a table with a repeater bound to the data model to display the incoming messages:
 									<div class="wp_syntax"><div class="code"><div class="at" style="font-family:monospace;"><span style="color: #F8F8F8;">&lt;</span>div class<span style="color: #F8F8F8;">=</span><span style="color: #80FF00;">"listcontainer"</span><span style="color: #F8F8F8;">&gt;</span><br>
 &nbsp; &nbsp;<span style="color: #F8F8F8;">&lt;</span>table class<span style="color: #F8F8F8;">=</span><span style="color: #80FF00;">"msglist"</span><span style="color: #F8F8F8;">&gt;</span><br>
@@ -115,7 +115,7 @@ Aria.<span style="color: #F8F8F8;">loadTemplate</span><span style="color: #F8F8F
 &nbsp; &nbsp; &nbsp; <span style="color: #F8F8F8;">}</span><span style="color: #F8F8F8;">/</span><span style="color: #F8F8F8;">}</span><br>
 &nbsp; &nbsp;<span style="color: #F8F8F8;">&lt;/</span>table<span style="color: #F8F8F8;">&gt;</span><br>
 <span style="color: #F8F8F8;">&lt;/</span>div<span style="color: #F8F8F8;">&gt;</span></div></div></div>
-									<p class="note"><b>Note:</b> To get more info about repeaters take a look at <a href="/usermanual/Writing_Templates#repeater">this page</a>.</p>
+									<p class="note"><b>Note:</b> To get more info about repeaters take a look at <a href="/usermanual/latest/writing_templates#repeater">this page</a>.</p>
 									Define the <code>pauseBtn()</code> macro to display the pause button that allow the users to pause and resume the incoming messages:
 									<div class="wp_syntax"><div class="code"><div class="at" style="font-family:monospace;">&nbsp; <span style="color: #F8F8F8;">{</span><span style="color: #BBBEFF">macro</span> pauseBtn<span style="color: #F8F8F8;">(</span><span style="color: #F8F8F8;">)</span><span style="color: #F8F8F8;">}</span><br>
 &nbsp; &nbsp; <span style="color: #F8F8F8;">{</span><span style="color: #BBBEFF">section</span> <span style="color: #F8F8F8;">{</span><br>

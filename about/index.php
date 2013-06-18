@@ -54,7 +54,7 @@
 							miss.</p>
 
 							<p>Let's hope you'll like it, we invite you to take <a href="/usermanual">a look</a> at Aria Templates, <a href="/guides">try it out</a>, and
-							share your <a href="/contact">thoughts</a> and <a href="/contribute">ideas</a>
+							share your <a href="/about/contact">thoughts</a> and <a href="/contribute">ideas</a>
 
 							<h3>License</h3>
 							<p>Aria Templates is an open source project under the <a href="/license">Apache 2.0 license</a>. All your contributions are very welcome, have a look at the

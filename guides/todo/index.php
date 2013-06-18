@@ -89,7 +89,7 @@ Aria.<span style="color: #F8F8F8;">loadTemplate</span><span style="color: #F8F8F
 &nbsp; &nbsp; &nbsp; <span style="color: #F8F8F8;">{</span><span style="color: #BBBEFF">call</span> listControl<span style="color: #F8F8F8;">(</span><span style="color: #80FF00;">"status"</span><span style="color: #F8F8F8;">)</span><span style="color: #F8F8F8;">/</span><span style="color: #F8F8F8;">}</span><br>
 &nbsp; &nbsp;<span style="color: #F8F8F8;">&lt;/</span>div<span style="color: #F8F8F8;">&gt;</span><br>
 <span style="color: #F8F8F8;">{</span><span style="color: #F8F8F8;">/</span><span style="color: #BBBEFF">macro</span><span style="color: #F8F8F8;">}</span></div></div></div>
-									<p class="note"><b>Note:</b> To get more info abour repeater take a look at <a href="/usermanual/Writing_Templates#repeater">this page</a>.</p>
+									<p class="note"><b>Note:</b> To get more info abour repeater take a look at <a href="/usermanual/latest/writing_templates#repeater">this page</a>.</p>
 									Define the macro to manage the mark all tasks feature, the number of tasks left and the clear all completed tasks using a section with the refresh bound to the tasks inside the data model:
 									<div class="wp_syntax"><div class="code"><div class="at" style="font-family:monospace;"><span style="color: #FFFF80">/**<br>
 &nbsp;* listControl<br>
@@ -125,7 +125,7 @@ Aria.<span style="color: #F8F8F8;">loadTemplate</span><span style="color: #F8F8F
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #F8F8F8;">{</span><span style="color: #F8F8F8;">/</span><span style="color: #BBBEFF">if</span><span style="color: #F8F8F8;">}</span><br>
 &nbsp; &nbsp;<span style="color: #F8F8F8;">{</span><span style="color: #F8F8F8;">/</span><span style="color: #BBBEFF">section</span><span style="color: #F8F8F8;">}</span><br>
 <span style="color: #F8F8F8;">{</span><span style="color: #F8F8F8;">/</span><span style="color: #BBBEFF">macro</span><span style="color: #F8F8F8;">}</span></div></div></div>
-									<p class="note"><b>Note:</b> To get more info about sections take a look at <a href="/usermanual/Writing_Templates#section">this page</a>.</p>
+									<p class="note"><b>Note:</b> To get more info about sections take a look at <a href="/usermanual/latest/writing_templates#section">this page</a>.</p>
 									Define the macro to manage the change of a task, displaying an input text to allow the user to update the task content and the icon to remove a task from the list:
 									<div class="wp_syntax"><div class="code"><div class="at" style="font-family:monospace;">&nbsp;<span style="color: #FFFF80">/**<br>
 &nbsp; * taskLine<br>
@@ -175,7 +175,7 @@ Aria.<span style="color: #F8F8F8;">loadTemplate</span><span style="color: #F8F8F
 &nbsp; &nbsp; aria.<span style="color: #F8F8F8;">utils</span>.<span style="color: #F8F8F8;">Json</span>.<span style="color: #F8F8F8;">deleteKey</span><span style="color: #F8F8F8;">(</span>el.<span style="color: #F8F8F8;">item</span><span style="color: #F8F8F8;">,</span> <span style="color: #80FF00;">"edit"</span><span style="color: #F8F8F8;">)</span><span style="color: #F8F8F8;">;</span><br>
 &nbsp; &nbsp; aria.<span style="color: #F8F8F8;">templates</span>.<span style="color: #F8F8F8;">RefreshManager</span>.<span style="color: #F8F8F8;">resume</span><span style="color: #F8F8F8;">(</span><span style="color: #F8F8F8;">)</span><span style="color: #F8F8F8;">;</span><br>
 <span style="color: #F8F8F8;">}</span></div></div></div>
-									<p class="note"><b>Note:</b> To get more info about the refresh manager take a look at <a href="/usermanual/Refresh#Stopping_and_resuming_refreshes">this page</a>.</p>
+									<p class="note"><b>Note:</b> To get more info about the refresh manager take a look at <a href="/usermanual/latest/refresh#stopping-and-resuming-refreshes">this page</a>.</p>
 									
 									<h4>Step 7</h4>
 									<p>Create a file and call it <i><b>ITodoCtrl.js</b></i>.</p>									
@@ -214,7 +214,7 @@ Aria.<span style="color: #F8F8F8;">loadTemplate</span><span style="color: #F8F8F
 &nbsp; &nbsp; &nbsp;this.<span style="color: #F8F8F8;">json</span>.<span style="color: #F8F8F8;">addListener</span><span style="color: #F8F8F8;">(</span>this._data<span style="color: #F8F8F8;">,</span> <span style="color: #80FF00;">"tasks"</span><span style="color: #F8F8F8;">,</span> <span style="color: #F8F8F8;">{</span>fn<span style="color: #F8F8F8;">:</span>this.__saveTasks<span style="color: #F8F8F8;">,</span> scope<span style="color: #F8F8F8;">:</span>this<span style="color: #F8F8F8;">}</span><span style="color: #F8F8F8;">,</span> false<span style="color: #F8F8F8;">,</span> true<span style="color: #F8F8F8;">)</span><br>
 &nbsp; <span style="color: #F8F8F8;">}</span></div></div></div>
 									Inside the constructor we check the localStorage to load an existing tasklist and we add a listener to the data model to automathically save, inside the localStorage, the task that the user add.
-									<p class="note"><strong>Note:</strong> To read more about listeners take a look at <a href="/usermanual/Helpers#JSON_Helper">this page</a>.</p>
+									<p class="note"><strong>Note:</strong> To read more about listeners take a look at <a href="/usermanual/latest/helpers#json-helper">this page</a>.</p>
 									<br/>
 									<p>Than the other functions:</p>
 									<ul>

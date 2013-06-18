@@ -19,13 +19,13 @@
 							to contribute to aria templates.</p>
 							
 							<h4>Share your work, open a Pull Request</h4>
-							<p>Please keep in mind that you have to follow some guidelines provided <a href="/usermanual/Code_Standards">here</a>.<br />
+							<p>Please keep in mind that you have to follow some guidelines provided <a href="/usermanual/latest/code_standards.html">here</a>.<br />
 							Be also sure to add or extend tests for your bug fix, your new feature or enhancement.</p>
 							<p>No freaking idea of what a Pull Request is? <a href="http://help.github.com/send-pull-requests/">Github Help pages</a> are your friend!</p>
 							
 							<h4 id="codestandards">Applying Code Standards</h4>
 							<p>If you want to contribute to the development of the aria templates framework pushing code to our Github repository, you need to know and follow some rules that we have.  These rules allow you to write more readable, documented and usable code and to reduce the number of errors.</p>			
-							<p>To ensure consistency throughout the source code, please <a href="/usermanual/Code_Standards">read and keep these rules in mind</a> as you are working.</p>
+							<p>To ensure consistency throughout the source code, please <a href="/usermanual/latest/code_standards.html">read and keep these rules in mind</a> as you are working.</p>
 							<h3>Bug spotted? Open an issue</h3>
 							<p>Even if you do not plan to push back some code, please let the community know as soon as you find a bug in aria templates.<p>
 							<p>To file a bug, it's super easy. Just go to the <a href="https://github.com/ariatemplates/ariatemplates/issues">issue tracker</a> and create a new issue.<br />
