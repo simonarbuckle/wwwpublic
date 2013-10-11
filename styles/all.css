@@ -48,6 +48,7 @@ a{color:#5092bd;text-decoration:none}
 a:visited{color:#5092bd}
 a:active{color:#5092bd}
 a:hover{color:#5092bd;text-decoration:underline}
+a:focus {background-color: #5092BD !important; color: #FFF !important; border-radius: 2px;}
 p{margin:10px 0}
 ul,ol{padding-left:30px}
 ol li{list-style-type:decimal}
@@ -164,10 +165,14 @@ body.home{background-image:url(../images/bg-top4.png)}
 .sample .box .title a{color:#888}
 .sample .box .tooltip{display:none;position:absolute;top:91px;left:155px;font-size:11px;color:#5092bd;font-weight:300;line-height:1em;font-family:'Ubuntu',sans-serif;font-style:normal;text-rendering:optimizelegibility}
 .sample .box:hover .tooltip{display:block}
-.sampleShot {background: none repeat scroll 0 0 #EEEEEE;border: 1px solid #DDDDDD;cursor: pointer;float: left;height: 140px;margin-bottom: 15px;margin-right: 15px;padding: 5px;width: 260px;list-style-type: none;}
-.sampleShot div {color: #444444;}
-.sampleShot a { margin: 0px; display: block; width: 100%; height: 100%; }
-.sampleShot a:hover {text-decoration: none;}
+.sampleShot {background: none repeat scroll 0 0 #EEEEEE;border: 1px solid #DDDDDD;cursor: pointer;float: left;height: 140px;margin-bottom: 20px;margin-right: 20px;width: 260px;list-style-type: none;}
+.sampleShot > a { margin: 0px; display: block; width: 100%; height: 100%; padding:5px; -moz-box-sizing: border-box; box-sizing: border-box;}
+.sampleShot > a:hover {text-decoration: none;}
+.sampleShot > a:focus,
+.sampleShot > a:active {background-color:#5092BD; color:#FFF; font-weight:bold;}
+.sampleShot > a > div {color: #444444;}
+.sampleShot > a:focus > div,
+.sampleShot > a:active > div{color:#FFF; font-weight:normal;}
 iframe.sampleShot {min-height: 400px; width:100%;}
 .box>div{padding:0 10px;font-size:12px}
 .box .title,.box .description{padding-left:10px;color:#888}
