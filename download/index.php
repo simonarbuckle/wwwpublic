@@ -27,6 +27,7 @@
               <tbody>
                 <?php
                   $versions = array(
+                    '1.4.11' => array( 'date' => "15/10/2013", "prod" => true, "dev" => true ),
                     '1.4.10' => array( 'date' => "26/09/2013", "prod" => true, "dev" => true ),
                     '1.4.9' => array( 'date' => "30/08/2013", "prod" => true, "dev" => true ),
                     '1.4.8' => array( 'date' => "23/07/2013", "prod" => true, "dev" => true ),
