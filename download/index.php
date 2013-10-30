@@ -15,6 +15,29 @@
                 <?php include '_current_version.php' ?></p>
             </div>
             <h3>Previous versions</h3>
+            <?php
+              $versions = array();
+              foreach (glob("/srv/www/ariatemplates.com/builds/*.zip") as $filename) {
+                $archive = basename($filename, ".zip");
+                preg_match('/^ariatemplates-(?:(?P<dev>dev)-)?(?P<version>.*)$/', $archive, $matches);
+                //echo "<pre>".print_r($matches, true)."</pre>";
+
+                if (!isset($versions[$matches['version']])) {
+                  $versions[$matches['version']] = array( 'dev' => false, 'prod' => false );
+                }
+                $build = &$versions[$matches['version']];
+
+                if ($matches['dev'] == 'dev') {
+                  $build['dev'] = true;
+                } else {
+                  $build['prod'] = true;
+                }
+                if (!isset($build['date'])) {
+                  $build['date'] = date("d/m/Y", filectime($filename));
+                }
+              }
+              krsort($versions);
+            ?>
             <table class="previous hor-zebra">
               <thead>
                 <tr>
@@ -26,33 +49,7 @@
               </thead>
               <tbody>
                 <?php
-                  $versions = array(
-                    '1.4.11' => array( 'date' => "15/10/2013", "prod" => true, "dev" => true ),
-                    '1.4.10' => array( 'date' => "26/09/2013", "prod" => true, "dev" => true ),
-                    '1.4.9' => array( 'date' => "30/08/2013", "prod" => true, "dev" => true ),
-                    '1.4.8' => array( 'date' => "23/07/2013", "prod" => true, "dev" => true ),
-                    '1.4.7' => array( 'date' => "01/07/2013", "prod" => true, "dev" => true ),
-                    '1.4.6' => array( 'date' => "14/06/2013", "prod" => true, "dev" => true ),
-                    '1.4.5' => array( 'date' => "22/05/2013", "prod" => true, "dev" => true ),
-                    '1.4.4' => array( 'date' => "22/05/2013", "prod" => true, "dev" => true ),
-                    '1.4.3' => array( 'date' => "29/04/2013", "prod" => true, "dev" => true ),
-                    '1.4.2' => array( 'date' => "15/04/2013", "prod" => true, "dev" => true ),
-                    '1.4.1' => array( 'date' => "11/04/2013", "prod" => true, "dev" => true ),
-                    '1.3.7' => array( 'date' => "19/03/2013", "prod" => true, "dev" => true ),
-                    '1.3.6' => array( 'date' => "25/02/2013", "prod" => true, "dev" => true ),
-                    '1.3.5' => array( 'date' => "05/02/2013", "prod" => true, "dev" => true ),
-                    '1.3.4' => array( 'date' => "11/01/2013", "prod" => true, "dev" => true ),
-                    '1.3.3' => array( 'date' => "20/12/2012", "prod" => true, "dev" => true ),
-                    '1.3.2' => array( 'date' => "04/12/2012", "prod" => true, "dev" => true ),
-                    '1.3.1' => array( 'date' => "14/11/2012", "prod" => false, "dev" => true ),
-                    '1.2.4' => array( 'date' => "20/08/2012", "prod" => false, "dev" => true ),
-                    '1.2.3' => array( 'date' => "30/07/2012", "prod" => false, "dev" => true ),
-                    '1.2.2' => array( 'date' => "06/07/2012", "prod" => false, "dev" => true ),
-                    '1.2.1' => array( 'date' => "18/06/2012", "prod" => false, "dev" => true ),
-                    '1.2.0' => array( 'date' => "06/06/2012", "prod" => true, "dev" => true )
-                  );
                   $i = 0;
-
                   foreach ($versions as $version => $options) {
                     $cssClass = "";
                     if ($i % 2 !== 0) {

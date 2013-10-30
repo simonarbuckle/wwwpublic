@@ -1,10 +1,40 @@
 <?php
-	$prod = array(
-		"version" => "1.4.11",
-		"date" => "15/10/2013");
-	$dev = array(
-		"version" => "1.4.11",
-		"date" => "15/10/2013");
+	$versions = array();
+  foreach (glob("/srv/www/ariatemplates.com/builds/*.zip") as $filename) {
+    $archive = basename($filename, ".zip");
+    preg_match('/^ariatemplates-(?:(?P<dev>dev)-)?(?P<version>.*)$/', $archive, $matches);
+    //echo "<pre>".print_r($matches, true)."</pre>";
+    if (!isset($versions[$matches['version']])) {
+      $versions[$matches['version']] = array( 'dev' => false, 'prod' => false );
+    }
+    $version = $versions[$matches['version']];
+    if ($matches['dev'] == 'dev') {
+      $version['dev'] = true;
+    } else {
+      $version['prod'] = true;
+    }
+    if (!isset($version['date'])) {
+      $version['date'] = date("d/m/Y", filectime($filename));
+    }
+    $versions[$matches['version']] = $version;
+  }
+  krsort($versions);
+
+	$prod = array( 'version' => false, 'date' => false );
+  $dev = array( 'version'=> false, 'date' => false );
+
+  function find_versions($item, $key) {
+  	global $prod, $dev;
+  	if ($item['prod'] && $prod['version'] == false) {
+  		$prod['version'] = $key;
+  		$prod['date'] = $item['date'];
+  	}
+  	if ($item['dev'] && $dev['version'] == false) {
+  		$dev['version'] = $key;
+  		$dev['date'] = $item['date'];
+  	}
+  }
+  array_walk($versions, "find_versions");
 
 	function human_filesize($bytes, $decimals = 2) {
   	$sz = array('B','Kb', 'Mb', 'Gb', 'Tb', 'Pb');
