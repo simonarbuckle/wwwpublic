@@ -10,11 +10,6 @@
         <div class="columns main-page">
           <article class="column">
             <h1>Download Aria Templates</h1>
-            <div class="quick-download">
-              <p>
-                <?php include '_current_version.php' ?></p>
-            </div>
-            <h3>Previous versions</h3>
             <?php
               $versions = array();
               foreach (glob("/srv/www/ariatemplates.com/builds/*.zip") as $filename) {
@@ -33,11 +28,20 @@
                   $build['prod'] = true;
                 }
                 if (!isset($build['date'])) {
-                  $build['date'] = date("d/m/Y", filectime($filename));
+                  $build['date'] = date("Y-m-d", filectime($filename));
                 }
               }
-              krsort($versions);
+
+              uksort($versions, function($a, $b) {
+                return -1 * version_compare($a, $b);
+              });
             ?>
+            <div class="quick-download">
+              <p>
+                <?php include '_current_version.php' ?></p>
+              </p>
+            </div>
+            <h3>Previous versions</h3>
             <table class="previous hor-zebra">
               <thead>
                 <tr>
@@ -50,7 +54,7 @@
               <tbody>
                 <?php
                   $i = 0;
-                  foreach ($versions as $version => $options) {
+                  foreach ($versions as $version => &$options) {
                     $cssClass = "";
                     if ($i % 2 !== 0) {
                       $cssClass = "odd";

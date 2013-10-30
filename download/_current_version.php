@@ -1,24 +1,30 @@
 <?php
-	$versions = array();
-  foreach (glob("/srv/www/ariatemplates.com/builds/*.zip") as $filename) {
-    $archive = basename($filename, ".zip");
-    preg_match('/^ariatemplates-(?:(?P<dev>dev)-)?(?P<version>.*)$/', $archive, $matches);
-    //echo "<pre>".print_r($matches, true)."</pre>";
-    if (!isset($versions[$matches['version']])) {
-      $versions[$matches['version']] = array( 'dev' => false, 'prod' => false );
+  global $versions;
+  if (!isset($versions)) {
+    $versions = array();
+    foreach (glob("/srv/www/ariatemplates.com/builds/*.zip") as $filename) {
+      $archive = basename($filename, ".zip");
+      preg_match('/^ariatemplates-(?:(?P<dev>dev)-)?(?P<version>.*)$/', $archive, $matches);
+      //echo "<pre>".print_r($matches, true)."</pre>";
+      if (!isset($versions[$matches['version']])) {
+        $versions[$matches['version']] = array( 'dev' => false, 'prod' => false );
+      }
+      $version = $versions[$matches['version']];
+      if ($matches['dev'] == 'dev') {
+        $version['dev'] = true;
+      } else {
+        $version['prod'] = true;
+      }
+      if (!isset($version['date'])) {
+        $version['date'] = date("d/m/Y", filectime($filename));
+      }
+      $versions[$matches['version']] = $version;
     }
-    $version = $versions[$matches['version']];
-    if ($matches['dev'] == 'dev') {
-      $version['dev'] = true;
-    } else {
-      $version['prod'] = true;
-    }
-    if (!isset($version['date'])) {
-      $version['date'] = date("d/m/Y", filectime($filename));
-    }
-    $versions[$matches['version']] = $version;
+
+    uksort($versions, function($a, $b) {
+      return -1 * version_compare($a, $b);
+    });
   }
-  krsort($versions);
 
 	$prod = array( 'version' => false, 'date' => false );
   $dev = array( 'version'=> false, 'date' => false );
