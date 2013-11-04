@@ -1,3 +1,6 @@
+<?php
+	define('_ROOT_PATH', realpath(dirname(__FILE__)));
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -27,7 +30,7 @@
 					<article class="columns">
 						<h3>What is it ?</h3>
 						<p>Aria Templates (aka AT) is an application framework written in JavaScript for building rich and large-scaled enterprise web applications.
-						It is being developed since 2009 by <accr>Amadeus</accr> for its professional products. It has been designed for web apps that are used 
+						It is being developed since 2009 by <accr>Amadeus</accr> for its professional products. It has been designed for web apps that are used
 						8+ hours a day, and that need to display and process high amount of data with a minimum of bandwidth consumption.
 						</p>
 						<div class="column layers">
@@ -47,10 +50,10 @@
 									<h4>Module</h4>
 									<p>Full stack development, with a clear separation of data management, logic, and interface elements.</p>
 								</div>
-							</div>	
+							</div>
 						</div>
-						
-					
+
+
 					</article>
 					<article class="columns two">
 						<div class="column">
