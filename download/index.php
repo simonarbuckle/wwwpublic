@@ -28,7 +28,7 @@
                   $build['prod'] = true;
                 }
                 if (!isset($build['date'])) {
-                  $build['date'] = date("Y-m-d", filectime($filename));
+                  $build['date'] = date("Y-m-d", filemtime($filename));
                 }
               }
 
