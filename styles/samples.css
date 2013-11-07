@@ -116,5 +116,11 @@ ul.layout {
 	color: #666666;
 }
 
+iframe.sampleShot {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 
 
