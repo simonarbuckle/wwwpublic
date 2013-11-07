@@ -30,7 +30,7 @@ class Env {
 			self::$bdd = '';
 			self::$os_local = OS_Windows;
 
-			Env::$manifestUrl = 'https://raw.github.com/ariatemplates/documentation-code/samples/manifest.json';
+			Env::$manifestUrl = 'https://raw.github.com/ariatemplates/documentation-code/master/manifest.json';
 
 		} else {
 			self::$isProd = true;
