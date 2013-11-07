@@ -17,7 +17,7 @@ class SamplesController {
         $cat = @$_GET['cat'];
         if ($cat != null) {
             $cat = preg_replace('#[^a-z0-9/ ]#i', '', $cat);
-            $filtered = [];
+            $filtered = array();
             $catRegexp = '#,'.$cat.'[,/]#';
             foreach($data->items as &$item) {
                 $categories = strtolower(@$item->categories);
@@ -47,7 +47,7 @@ class SamplesController {
         $search = @$_GET['s'];
         if ($search != null) {
             $search = preg_replace('/[^a-z ]/i', '', $search);
-            $filtered = [];
+            $filtered = array();
 
             $searchRegexp = '/'.$search.'/i';
             foreach($data->items as &$item) {
