@@ -64,7 +64,7 @@ li{margin-bottom:5px}
 #header nav a,#header nav a:visited{color:#494949}
 #header nav a:hover{color:#5092bd}
 #header nav a:last-child{margin-right:0}
-.documentation #header nav a.documentation,.wiki #header nav a.documentation,.about #header nav a.about,.blog #header nav a.blog,.forum #header nav a.forum,.contribute #header nav a.contribute{background-color:#5092bd;color:#fff;border-radius:5px 5px 5px 5px}
+.documentation #header nav a.documentation,.wiki #header nav a.documentation,.about #header nav a.about,.blog #header nav a.blog,.forum #header nav a.forum,.contribute #header nav a.contribute,.plugins #header nav a.plugins{background-color:#5092bd;color:#fff;border-radius:5px 5px 5px 5px}
 #header nav a.download{font-weight:700;color:#fff}
 section.content{width:960px;margin:0 auto;overflow:hidden}
 .content-wrapper{background-color:#f8f8f8;position:relative}
