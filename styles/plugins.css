@@ -1,0 +1,4 @@
+.columns.one .column:first-child{width:100%}
+.thumbnail {float: left; margin-right: 10px;}
+.thumbnail > img {height: 125px;}
+.posts .post footer {clear: both;}
