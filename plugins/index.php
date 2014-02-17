@@ -20,6 +20,7 @@
 					<div class="columns main-page one">
 						<div class="column">
 							<h1>Plugins</h1>
+							The Aria Templates plugin registry
 							<div class="posts">
 								<?php foreach($list->data as &$plugin) { ?>
 									<article class="post type-post status-publish format-standard hentry category-css category-customization category-widget">

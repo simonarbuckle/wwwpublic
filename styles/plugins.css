@@ -2,3 +2,4 @@
 .thumbnail {float: left; margin-right: 10px;}
 .thumbnail > img {height: 125px; border: 1px solid;}
 .posts > .post > footer {clear: both;}
+.posts {border-top: 1px solid #ededed;margin-top: 20px;}
