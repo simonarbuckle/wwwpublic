@@ -37,17 +37,17 @@
 								<div class="footer">
 									<span class="left">
 										<a href="/guides/hello/">View step by step instructions</a> - 
-										<a href="/ariadoc/guides/hello-guide-1.2.0.zip" onClick="javascript: _gaq.push(['_trackEvent', 'Downloads', 'Guides', 'HelloWorld']);">Download this guide</a>
+										<a href="/ariadoc/guides/hello-guide.zip" onClick="javascript: _gaq.push(['_trackEvent', 'Downloads', 'Guides', 'HelloWorld']);">Download this guide</a>
 									</span>
 									<span class="right">
 										<a href="/guides/treeview/">View step by step instructions</a> - 
-										<a href="/ariadoc/guides/treeview-guide-1.2.0.zip">Download this guide</a>
+										<a href="/ariadoc/guides/treeview-guide.zip">Download this guide</a>
 									</span>
 								</div>
 							</div>
 							<h3>Applications</h3>
 							<div class="guide withImg">
-								<div class="screenshot todo"><div class="overlay"><a href="/ariadoc/guides/todo-guide-1.2.0.zip" onClick="javascript: _gaq.push(['_trackEvent', 'Downloads', 'Guides', 'Todo']);"><img src="/images/guides/boxdownload42.png"></img>Download this guide</a></div></div>
+								<div class="screenshot todo"><div class="overlay"><a href="/ariadoc/guides/todo-guide.zip" onClick="javascript: _gaq.push(['_trackEvent', 'Downloads', 'Guides', 'Todo']);"><img src="/images/guides/boxdownload42.png"></img>Download this guide</a></div></div>
 								<h4>Todo <small><a href="/ariadoc/guides/todo/" target="_blank">try it</a></small></h4>
 								<p>This guide has been written in the scope of an opensource project: <a href="">TodoMVC</a>.<br />
 								This project is about building a common todo application for the most popular JavaScript MVC frameworks.<br/><br/>
@@ -58,7 +58,7 @@
 							</div>
 							
 							<div class="guide withImg">
-								<div class="screenshot drench"><div class="overlay"><a href="/ariadoc/guides/drench-guide-1.2.0.zip" onClick="javascript: _gaq.push(['_trackEvent', 'Downloads', 'Guides', 'Drench']);"><img src="/images/guides/boxdownload42.png"></img>Download this guide</a></div></div>
+								<div class="screenshot drench"><div class="overlay"><a href="/ariadoc/guides/drench-guide.zip" onClick="javascript: _gaq.push(['_trackEvent', 'Downloads', 'Guides', 'Drench']);"><img src="/images/guides/boxdownload42.png"></img>Download this guide</a></div></div>
 								<h4>Drench <small><a href="/ariadoc/guides/drench/" target="_blank">try it</a></small></h4>
 								<p>This application is about a funny game.<br/>
 								The goal is to clear the board with the lowest possible number of moves, using the different colors.<br/><br/>
@@ -70,7 +70,7 @@
 							
 							<h3>More specific guides</h3>
 							<div class="guide withImg">
-								<div class="screenshot airportmap"><div class="overlay"><a href="/ariadoc/guides/airportmap-guide-1.2.0.zip" onClick="javascript: _gaq.push(['_trackEvent', 'Downloads', 'Guides', 'AirportMap']);"><img src="/images/guides/boxdownload42.png"></img>Download this guide</a></div></div>
+								<div class="screenshot airportmap"><div class="overlay"><a href="/ariadoc/guides/airportmap-guide.zip" onClick="javascript: _gaq.push(['_trackEvent', 'Downloads', 'Guides', 'AirportMap']);"><img src="/images/guides/boxdownload42.png"></img>Download this guide</a></div></div>
 								<h4>Airport Map <small><a href="/ariadoc/guides/airportmap/" target="_blank">try it</a></small></h4>
 								<p>This application simulate an airport map, showing airplanes parked and airplanes taking off.<br/><br/>
 								In this guide we simulate the request/response mechanism using a <a href="/usermanual/latest/filters">filter</a>, in order to load flights data from different xml files. The application polls the xml files to have the updated data about the flights. When the application starts, it loads the data using the <a href="/usermanual/latest/template_scripts#intercepting-template-lifecycle-phases">$viewReady</a> statement. To update the data the app uses the <a href="/usermanual/latest/template_scripts#reacting-to-module-and-flow-events">onModuleEvent</a> method.</p>
@@ -81,7 +81,7 @@
 							</div>
 							
 							<div class="guide withImg">
-								<div class="screenshot msgconsole"><div class="overlay"><a href="/ariadoc/guides/msgconsole-guide-1.2.0.zip" onClick="javascript: _gaq.push(['_trackEvent', 'Downloads', 'Guides', 'MsgConsole']);"><img src="/images/guides/boxdownload42.png"></img>Download this guide</a></div></div>
+								<div class="screenshot msgconsole"><div class="overlay"><a href="/ariadoc/guides/msgconsole-guide.zip" onClick="javascript: _gaq.push(['_trackEvent', 'Downloads', 'Guides', 'MsgConsole']);"><img src="/images/guides/boxdownload42.png"></img>Download this guide</a></div></div>
 								<h4>Message Console <small><a href="/ariadoc/guides/msgconsole/" target="_blank">try it</a></small></h4>
 								<p>This guide shows how to create a console that display incoming messages.<br/><br/>
 								To simulate the incoming messages, the application uses a <a href="/usermanual/latest/filters">filter</a> to fetch data from different xml files. It shows also how to stop and resume the requests. The interface is composed by <a href="/usermanual/latest/refresh#section-automatic-refresh">sections</a>, one containing the initial message and the info about the total messages and another one with the pause/resume button, both bound to the data model. Than there are three widgets: <a href="/usermanual/latest/tooltip">@aria:Tooltip</a>, <a href="/usermanual/latest/tooltip">@aria:Text</a> and <a href="/usermanual/latest/button">@aria:Button</a>. To display the incoming messages the app uses a <a href="/usermanual/latest/writing_templates#repeater">repeater</a>.</p>
@@ -91,7 +91,7 @@
 							</div>
 							
 							<div class="guide withImg">
-								<div class="screenshot spreadsheet"><div class="overlay"><a href="/ariadoc/guides/spreadsheet-guide-1.2.0.zip" onClick="javascript: _gaq.push(['_trackEvent', 'Downloads', 'Guides', 'Spreadsheet']);"><img src="/images/guides/boxdownload42.png"></img>Download this guide</a></div></div>
+								<div class="screenshot spreadsheet"><div class="overlay"><a href="/ariadoc/guides/spreadsheet-guide.zip" onClick="javascript: _gaq.push(['_trackEvent', 'Downloads', 'Guides', 'Spreadsheet']);"><img src="/images/guides/boxdownload42.png"></img>Download this guide</a></div></div>
 								<h4>Spreadsheet <small><a href="/ariadoc/guides/spreadsheet/" target="_blank">try it</a></small></h4>
 								<p>This guide simulate a program to generate and use spreadsheets. It allows you to create a new spreadsheet, to load it, using external xml files, and to copy an existing one. The goal is to show how easy is to use a large amount of data with aria templates and how the partial refresh works with repeaters.<br/><br/>
 								To load datasets the app uses a <a href="/usermanual/latest/filters">filter</a> to fetch data from an xml file. It uses different macros, the <a href="/usermanual/latest/link">@aria:Link</a> and the <a href="/usermanual/latest/textfield">@aria:TextField</a> widgets and a <a href="/usermanual/latest/writing_templates#repeater">repeater</a> to create the interface.</p>
@@ -100,7 +100,7 @@
 								</p>
 							</div>
 							<div class="allguides">
-								<a href="/ariadoc/guides/all-guides-1.2.0.zip" onClick="javascript: _gaq.push(['_trackEvent', 'Downloads', 'Guides', 'All_Guides']);">Download all Guides at once</a>
+								<a href="/ariadoc/guides/all-guides.zip" onClick="javascript: _gaq.push(['_trackEvent', 'Downloads', 'Guides', 'All_Guides']);">Download all Guides at once</a>
 							</div>
 						</article>			
 					</div>
