@@ -1,1 +1,1 @@
-aria.core.DownloadMgr.updateUrlMap({atplugins:{"**":"atplugins.carousel-d4585871f80159bed521fc22e66c8afa.js"}});
+aria.core.DownloadMgr.updateUrlMap({atplugins:{"**":"atplugins.carousel-b927b4ca081f878aa7f809d4e31cf098.js"}});
