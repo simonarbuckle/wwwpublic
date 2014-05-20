@@ -31,6 +31,9 @@
 
   function find_versions($item, $key) {
   	global $prod, $dev;
+    if (strpos($key, "beta") !== false) {
+      return;
+    }
   	if ($item['prod'] && $prod['version'] == false) {
   		$prod['version'] = $key;
   		$prod['date'] = $item['date'];
