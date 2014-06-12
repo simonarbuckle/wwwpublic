@@ -3,6 +3,11 @@
 	<head>
 		<?php include 'include/_head.php' ?>
 		<script type="text/javascript" src="/js/top-scrolling.js"></script>
+		<style>
+			#questions h2 { margin: 30px 0 20px; }
+			#questions h4 { color: #000; text-transform: inherit; margin: 25px 0 10px 0;}
+			#questions p, pre { margin-left: 20px; }
+		</style>
 	</head>
 	<body class="documentation">
 		<div id="top"><a href="#top"></a></div>
@@ -60,7 +65,7 @@
 
 								<h4>Why “HashSpace”?</h4>
 									<p>The name HashSpace is a reference to the characters used at the beginning of a template definition:
-									<pre><span style="background-color:yellow"># </span>template hello(world)</pre>
+									<pre><span style="background-color:#f1ff9b"># </span>template hello(world)</pre>
 
 								<h4>Is it a new framework?  Is it backward compatible?</h4>
 									<p>HashSpace is an alternate engine inside AT, it is not a framework on its own.  The syntax it uses is different from the one used in Atlas and each engine is only able to process templates specifically written for it.
@@ -89,13 +94,13 @@
 								<h4>(Atlas) Updating the data model does not trigger any refresh</h4>
 									<p>You probably are modifying the data model directly instead of using the <a href="http://www.ariatemplates.com/aria/guide/apps/apidocs/#aria.utils.Json">appropriate helpers</a>.  For example, bindings will not be notified if you type
 									<pre>this.data.score = 42;</pre>
-									For this to work properly you need to write
+									<p>For this to work properly you need to write
 									<pre>aria.utils.Json.setValue(this.data, "score", 42);</pre>
 
 								<h4>(Atlas) I added a controller and my app stopped working</h4>
 									<p>Chances are that your controller implements an init() method that doesn't complete properly.  Remember that, because init can be implemented asynchronously, the framework has no way to tell when it finishes.  To state that you're done, your init method must at one point call back the framework like this:
 									<pre>this.$callback(cb);</pre>
-									The callback pattern is explained <a href="/usermanual/latest/working_in_an_asynchronous_world">here</a>.
+									<p>The callback pattern is explained <a href="/usermanual/latest/working_in_an_asynchronous_world">here</a>.
 
 							<h2>Reaching us</h2>
 
@@ -123,7 +128,7 @@
 									<p>On specific occasions, some features may need to be replaced or simply removed.  When this happens, the deprecation is clearly announced in the corresponding release notes and the deprecation period starts.  During this period, which lasts from 9 to 15 weeks, deprecated feature will continue to work while issuing warnings in the console.  At the end of this period, a non-backward compatible release is delivered.
 
 						</div>
-
+					</div>
 				</div>
 			</section>
 		</div>
