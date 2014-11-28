@@ -26,12 +26,6 @@
 									<div class="location">Nice, France</div>
 								</div>
 								<div class="member">
-									<h5>Susanta Behera</h5>
-									<img src="https://1.gravatar.com/avatar/20aa3a9f39711058135a38016ca75b0d?d=https%3A%2F%2Fidenticons.github.com%2F68015967da9b4a3299386916466ddacb.png&s=420" />
-									<div class="github"><a href="https://github.com/susant123">susant123</a></div>
-									<div class="location">Bangalore, India</div>
-								</div>
-								<div class="member">
 									<h5>Fabiano Bernardo</h5>
 									<img src="https://0.gravatar.com/avatar/5b2e0ee2c986e068b254379d8dbfded0?d=https%3A%2F%2Fidenticons.github.com%2Fa20597f08ea792d6c3375028dfbb66c7.png&s=420" />
 									<div class="github"><a href="https://github.com/fab-b">fab-b</a></div>
@@ -74,28 +68,10 @@
 									<div class="location">Nice, France</div>
 								</div>
 								<div class="member">
-									<h5>Srinath Madapathi</h5>
-									<img src="https://1.gravatar.com/avatar/daeef354905e477cd4ecca2d9eb87deb?d=https%3A%2F%2Fidenticons.github.com%2F93ae3dc8b1d5055029e16dde71bd2458.png&s=420" />
-									<div class="github"><a href="https://github.com/smadapathi">smadapathi</a></div>
-									<div class="location">Bangalore, India</div>
-								</div>
-								<div class="member">
-									<h5>Girish Manjunath</h5>
-									<img src="https://2.gravatar.com/avatar/cb7e0f1c2a70bd8fe7af432260cf982c?d=https%3A%2F%2Fidenticons.github.com%2F26887546162cf3a00952e14b3ec38269.png&s=420" />
-									<div class="github"><a href="https://github.com/Gprasad">Gprasad</a></div>
-									<div class="location">Bangalore, India</div>
-								</div>
-								<div class="member">
 									<h5>Yannick Meine</h5>
 									<img src="https://1.gravatar.com/avatar/381441499d2134da8f9d940898d99e6f?d=https%3A%2F%2Fidenticons.github.com%2Fbe04dbf99a923c527b93f664a489bca5.png&s=420" />
 									<div class="github"><a href="https://github.com/ymeine">ymeine</a></div>
 									<div class="location">Nice, France</div>
-								</div>
-								<div class="member">
-									<h5>Renju Richard</h5>
-									<img src="https://0.gravatar.com/avatar/144422d124027fc35f9d4be41db5eb85?d=https%3A%2F%2Fidenticons.github.com%2Fd4635f7b6b492241a6e76f7c2d5bbdb9.png&s=420" />
-									<div class="github"><a href="https://github.com/renjurichard">renjurichard</a></div>
-									<div class="location">Bangalore, India</div>
 								</div>
 								<div class="member">
 									<h5>Lorenzo Simone</h5>
@@ -124,6 +100,10 @@
 									<dd>Core development de passage</dd>
 									<dt>Julian Descottes</dt>
 									<dd>Core and unit test tool development</dd>
+									<dt>Renju Richard</dt>
+									<dd>Development and support</dd>
+									<dt>Girish Manjunath</dt>
+									<dd>Development and support</dd>
 								</dl>
 								<dl class="left">
 									<dt>Antonio d'Ettole</dt>
@@ -141,6 +121,10 @@
 									<dt>Jan Tarnawski</dt>
 									<dd>Development and support</dd>
 									<dt>Rickard Winberg</dt>
+									<dd>Development and support</dd>
+									<dt>Susanta Behera</dt>
+									<dd>Development and support</dd>
+									<dt>Srinath Madapathi</dt>
 									<dd>Development and support</dd>
 								</dl>							
 							</div>
