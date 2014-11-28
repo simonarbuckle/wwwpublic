@@ -23,6 +23,7 @@
 									<a href="/api">API doc</a>
 									<a href="/samples">Samples</a>
 									<a href="/guides">Guides</a>
+									<a href="/usermanual/latest/packaging">Packaging</a>
 								</div>
 							</div>
 						</div>
