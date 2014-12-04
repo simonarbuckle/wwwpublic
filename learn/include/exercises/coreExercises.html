@@ -1,0 +1,402 @@
+<h1>Core Exercises</h1> 
+<h2>Scope</h2>
+          <p>This session mainly focuses on the framework basic notions. You will discover how to create and manipulate all the different kind of objects that define Aria Templates core layer.</p>
+          <ul>
+            <li>How to create a class definition?</li>
+            <li>How to manage my dependencies?</li>
+            <li>How to create a singleton?</li>
+            <li>Can I use events?</li>
+            <li>What about interfaces ?</li>
+            <li>Do you provide out of the box standard libraries to ease my development?</li>
+          </ul>
+
+          <p>Don't  move, stay relaxed, and guess what? all the answers to these questions are covered in this hands-on session !!</p>
+          <h2>Let's code!</h2>
+          <h4>Pre-requisites</h4>
+          <p>Create a <code>core/</code> folder, located in the <code>/exercises/handson/</code> folder. This is where all the code belonging to this hands-on session is going to be written.</p>
+
+          <h4>Overview & Context</h4>
+          <p>We are going to play around with shapes classes, such as rectangle and square. We'll also create a manager class in order to manipulate instances of shapes.</p>
+
+          <h3>Bootstrap File</h3>
+          <div class="step">
+            <h4>step 1</h4>
+            <p>Create an <code>index.html</code> file based on this skeleton
+              <pre><code class="html">&lt;html>
+  &lt;head>
+    &lt;title>Aria Templates Training&lt;/title>
+  &lt;/head>
+  &lt;body>
+    &lt;h1>Playing with Aria Templates for the first time !&lt;/h1>
+    &lt;script>
+      /* Your code goes here ! */
+    &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre>
+            </p>
+          </div>
+          <div class="step">
+            <h4>step 2</h4>
+            <p>Add Aria Templates framework. Just include the latest version via <a href="http://cdn.ariatemplates.com" target="_blank">Aria Templates cdn</a>.</p>
+            <p><pre><code class="html">&lt;script src="http://cdn.ariatemplates.com/at&lt;version>.js">&lt;/script></code></pre></p>
+            <p>Where <code>&lt;version></code> correspond to the latest version available.</p>
+            <div class="hints">
+              <p>You can actually use <code>latest</code></p>
+            </div>
+          </div>
+          <h3>Class Definition</h3>
+          <p>What about creating our first Aria Templates class definition?</p>
+          <div class="step">
+            <h4>step 1</h4>
+            <ul>
+              <li>Create a file named <code>Shape.js</code>.</li>
+              <li>Write the corresponding class definition inside the file.</li>
+            </ul>
+            <div class="hints">
+              <p>Declaring core Aria Templates objects is documented <a href="http://ariatemplates.com/usermanual/latest/the_aria_singleton">here</a>.</p>
+            </div>
+          </div>
+          <div class="step">
+            <h4>step 2 - constructor</h4>
+            <ul>
+              <li>Add a <code>$constructor</code> to the <code>Shape</code> class. It should receive a color as parameter.</li>
+              <li>Set the member protected variable <code>_color</code> of the class to the value received as parameter.</li>
+            </ul>
+          </div>
+          <div class="step">
+            <h4>step 3 - prototype</h4>
+            <p>Define method <code>getColor</code> in the prototype of the <code>Shape</code> class. It should return the color property of the instance of <code>Shape</code>.</p>
+          </div>
+          <div class="step">
+           <h4>step 4 - statics</h4>
+            <ul>
+              <li>Add a static default <code>DEFAULT_COLOR</code> to your <code>Shape</code> class.</li>
+              <li>Set the value to <code>"black"</code>.</li>
+              <li>Change the constructor so that it sets the color to the default one if the parameter is <code>null</code> or <code>undefined</code>.</li>
+            </ul>
+            <div class="hints">
+              <p>To add statics declaration to a class just add a <code>$statics</code> keyword to your class definition. Documentation can be found <a href="http://ariatemplates.com/usermanual/latest/javascript_classes">here</a>.</p>
+              <p>Playing with <code>$statics</code> is just a matter of creating Json objects.</p>
+            </div>
+          </div>
+          <div class="step test">
+            <h4>step 5</h4>
+            <p>Let's load our class definition in the browser.</p>
+            <ul>
+              <li>Open and locate the <code>&lt;script> ... &lt;/script></code> section at the end of your <code>index.html</code> boostrap file.</li>
+              <li>Use the <code>Aria</code> singleton to load your shape class definition.</li>
+              <li>Write an anonymous method to create a new instance of your <code>Shape</code> class definition. Use it in your load declaration.</li>
+              <li>The method should create an instance of the <code>Shape</code> class (try to do it with and without passing an argument to the constructor) and call the <code>getColor</code> method on it (display the value to the console). It should also access the default color directly on the <code>Shape</code> class, without using the instances.</li>
+              <li>Open your browser console (hit <code>F12</code>), and refresh the page.</li>
+              <li>Check that the right messages have been logged in the console. You should not see any errors.</li>
+            </ul>
+            <div class="hints">
+              <p>Loading objects is documented <a href="http://ariatemplates.com/usermanual/latest/the_aria_singleton">here</a>.</p>
+            </div>
+          </div>
+
+
+
+
+          <h3>Singleton</h3>
+          <p>And now let's create our first Aria Templates singleton.</p>
+          <div class="step">
+            <h4>step 1</h4>
+            <ul>
+              <li>Create a file name <code>Logger.js</code>.</li>
+              <li>Write the corresponding class definition inside this file.</li>
+              <li>Consider declaring this class as a <code>singleton</code>.</li>
+            </ul>
+            <div class="hints">
+              <p>Defining a singleton is as easy as setting the <code>$singleton</code> keyword class property to <code>true</code>. Documentation can be found <a href="http://ariatemplates.com/usermanual/latest/javascript_classes">here</a>.</p>
+            </div>
+          </div>
+          <div class="step">
+            <h4>step 2</h4>
+            <ul>
+              <li>Define a <code>debug()</code> and <code>info()</code> methods on the class prototype.</li>
+              <li>Specify only one <code>message</code> argument.</li>
+              <li>Simply use the browser <code>console</code> to log the message using <code>console.log()</code> and <code>console.info()</code>.</li>
+            </ul>
+          </div>
+          <div class="step test">
+            <h4>step 3</h4>
+            <p>Let's load our singleton class definition in the browser.</p>
+            <ul>
+              <li>Update the <code>Aria.load</code> code form your bootstrap page to also load the singleton.</li>
+              <li>Update the anonymous method to use the <code>info()</code> method.</li>
+              <li>Open your browser console (hit <code>F12</code>), and refresh the page.</li>
+              <li>You should see your info message in the console, with no errors.</li>
+            </ul>
+          </div>
+
+
+
+
+
+          <h3>Inheritance</h3>
+          <p>If you know the classpath of the class definition from which you want to inherit, you're all set for inheritance. Let's create some new classes and inherit form <code>Shape</code>.</p>
+          <div class="step">
+            <h4>step 1</h4>
+            <p>Let's create 2 news classes</p>
+            <ul>
+              <li>Create a new class definition in the same current folder, name it <code>Rectangle.js</code>.</li>
+              <li>Let this class inherit from class <code>Shape</code>.</li>
+              <li>Override the default static <code>DEFAULT_COLOR</code> setting it to <code>"blue"</code>.</li>
+              <li>Add two new static properties to define a default <code>DEFAULT_WIDTH</code> and <code>DEFAULT_HEIGHT</code>.</li>
+              <li>Create a <code>constructor</code> that has two further arguments (width and height) and stores them to member properties. Don't forget to call the superclass <code>Shape</code> constructor with the color argument.</li>
+              <li>Add a <code>computeArea</code> method in the prototype of the <code>Rectangle</code> class.</li>
+            </ul>
+            <div class="hints">
+              <p>Inheritance documentation can be read <a href="http://ariatemplates.com/usermanual/latest/around_classes#inheritance-$extends">here</a>.</p>
+            </div>
+          </div>
+          <div class="step">
+            <h4>step 2</h4>
+            <ul>
+              <li>Create a second new class definition, name it <code>Square.js</code>.</li>
+              <li>Let this class inherit from the <code>Rectangle</code> one.</li>
+              <li>Override the default static <code>DEFAULT_WIDTH</code>.</li>
+              <li>Create a <code>constructor</code> that only receives the color and width arguments and properly calls the superclass <code>Rectangle</code> constructor.</li>
+            </ul>
+            <div class="hints">
+              <p>Inheritance documentation can be read <a href="http://ariatemplates.com/usermanual/latest/around_classes#inheritance-$extends">here</a>.</p>
+            </div>
+          </div>
+          <div class="step">
+            <h4>step 3</h4>
+            <ul>
+              <li>Edit the <code>Logger</code> singleton to use the inherited logging methods from <code>JsObject</code> instead of the browser native one.</li>
+            </ul>
+          </div>
+          <div class="step test">
+            <h4>step 4</h4>
+            <ul>
+              <li>Update the bootstrap file to load and create two new instances of the two new classes, <code>Rectangle</code> and <code>Square</code>.</li>
+              <li>In order to get the logging ability activated, you need to switch the framework mode to debug. In order to do that, simply paste the following code before the framework inclusion <code>&lt;script> var Aria = { debug: true }; &lt;/script></code>.</li>
+              <li>Open your browser console (hit <code>F12</code>), and refresh the page.</li>
+              <li>Use the <code>Logger</code> class in order to log the computed areas of the two instances and their colors.</li>
+            </ul>
+          </div>
+
+          <h3>Dependencies</h3>
+          <p>We can also manage dependencies through any class definition.</p>
+          <div class="step">
+            <h4>step 1</h4>
+            <ul>
+              <li>Declare the <code>Logger</code> singleton as a static dependency of the <code>Shape</code> class.</li>
+              <li>Use the singleton to log to the console a message to ensure that the <code>$constructor</code> is correctly called.</li>
+              <li>Also log the default color of shape.</li>
+            </ul>
+            <div class="hints">
+              <p>Dependencies management documentation can be found <a href="http://ariatemplates.com/usermanual/latest/around_classes#dependencies-$dependencies">here</a>.</p>
+            </div>
+          </div>
+          <div class="step test">
+            <h4>step 2</h4>
+            <ul>
+              <li>Update the <code>Aria.load</code> code form your bootstrap page to remove the singleton classpath.</li>
+              <li>Open your browser console (hit <code>F12</code>), and refresh the page.</li>
+              <li>You should see your <code>Shape</code> constructor messages in the console, with no errors.</li>
+            </ul>
+          </div>
+
+
+
+          <h3>Events</h3>
+          <p>Let's create a new singleton class to act as a store for instances of <code>Shape</code> such as <code>Rectangle</code> and <code>Square</code>.</p>
+          <div class="step">
+            <h4>step 1</h4>
+            <ul>
+              <li>Create a new file, named <code>Manager.js</code>.</li>
+              <li>Write the class definition such as it defines a <code>singleton</code>.</li>
+              <li>Define a <code>constructor</code> in which you initialise an empty array to store the instances.</li>
+            </ul>
+          </div>
+          <div class="step">
+            <h4>step 2</h4>
+            <ul>
+              <li>Create 2 new methods <code>addShape()</code> and <code>removeShape()</code>.</li>
+              <li>The <code>addShape()</code> method is waiting for a <code>Shape</code> instance as a single argument. It also returns the index in the shape store.</li>
+              <li>The <code>removeShape()</code> method takes an index of shape to be removed as a single argument.</li>
+            </ul>
+          </div>
+          <div class="step">
+            <h4>step 3</h4>
+            <ul>
+              <li>Define an event <code>shapeAdded</code> to be raised from the method <code>addShape()</code></li>
+              <li>Define an event <code>shapeRemoved</code> to be raised from the method <code>removeShape()</code></li>
+            </ul>
+            <div class="hints">
+              <p>Managing <code>events</code> at class definition level is documented <a href="http://ariatemplates.com/usermanual/latest/around_classes#events-$events">here</a>.</p>
+            </div>
+          </div>
+          <div class="step test">
+            <h4>step 4</h4>
+            <ul>
+              <li>Update the bootstrap file to load the new manager singleton.</li>
+              <li>Then create new instances of various shapes, and register them to the manager using <code>addShape()</code>.</li>
+              <li>Define an anonymous method to be listening to the <code>shapeAdded</code> event the manager might raise, and produce a log to the console.</li>
+              <li>Go back to your browser, eventually open your browser console if not yet done (hit <code>F12</code>), and refresh the page.</li>
+              <li>Verify that the event was fired, and the log produced.</li>
+            </ul>
+            <ul>
+              <li>Update again the bootstrap code to remove the created instances added to the manager (keep the index as a reference within local variables) using the <code>removeShape()</code> method.</li>
+              <li>Update also the anonymous method to listen to the <code>shapeRemoved</code> event. Also write some informative text to the console.</li>
+              <li>Go back to your browser, eventually open your browser console if not yet done (hit <code>F12</code>), and refresh the page.</li>
+              <li>Verify that the event was fired, and the log produced.</li>
+            </ul>
+          </div>
+
+          <h3>Beans</h3>
+          <p>Using bean definitions, we can create a mechanism to normalise default properties on our <code>Shape</code> class definition.</p>
+          <div class="step">
+            <h4>step 1</h4>
+            <ul>
+              <li>Create a new beans definition file, name it <code>ShapeDefinitions.js</code>.</li>
+              <li>Define this bean to be able to use as a namespace the internal <code>aria.core.JsonTypes</code>.</li>
+              <li>Change the <code>constructor</code> of the <code>Square</code> class to accept, as argument, a single object with the properties <code>color</code> and <code>width</code>.</li>
+            </ul>
+            <div class="hints">
+              <p>Creation and definition of JSON beans is located <a href="http://ariatemplates.com/usermanual/latest/json_bean_definitions">here</a> in the usermanual.</p>
+              <p>Using the default provided built-in data types in bean is also documented on the same usermanual page, <a href="http://ariatemplates.com/usermanual/latest/json_bean_definitions#built-in-data-types">here</a>.</p>
+            </div>
+          </div>
+          <div class="step">
+            <h4>step 2</h4>
+            <ul>
+              <li>Define a new bean in the <code>$beans</code> section, that correspond to the arguments of the <code>Square</code> constructor.</li>
+              <li>Name it <code>SquareConfiguration</code> and let it be of type <code>Object</code>.</li>
+              <li>Add a property <code>color</code> of type <code>Enum</code> to this definition, with some enum colors values of your choice, and a default one.</li>
+              <li>Add a property <code>width</code> of type <code>Integer</code> to this definition.</li>
+            </ul>
+            <div class="hints">
+              <p>Defining a new bean only consist to add a new JSON object to the keyword section <code>$beans</code> of a bean definitions.</p>
+              <p>Bean definitions examples can be found <a href="http://ariatemplates.com/usermanual/latest/json_bean_definitions">here</a>.</p>
+            </div>
+          </div>
+          <div class="step">
+            <h4>step 3</h4>
+            <ul>
+              <li>Add your newly created bean definitions as a <code>dependency</code> of your <code>Square</code> class definition.</li>
+              <li>From within the constructor, use the <a href="http://www.ariatemplates.com/aria/guide/apps/apidocs/#aria.core.JsonValidator:normalize:method"><code>normalize</code> method of <code>JsonValidator</code> singleton</a> to normalize the argument of the <code>Square</code> constructor.</li>
+            </ul>
+            <div class="hints">
+              <p>Adding a static dependency is just a matter of using the class definition keyword <code>$dependencies</code>.</p>
+              <p>Examples of bean definitions normalization can be found on this usermanual page <a href="http://ariatemplates.com/usermanual/latest/json_bean_definitions#validation">here</a>.</p>
+            </div>
+          </div>
+
+          <div class="step test">
+            <h4>step 4</h4>
+            <ul>
+              <li>Clear your bootstrap code to only load and create a new instance of class <code>Square</code>.</li>
+              <li>Call the <code>getColor()</code> method.</li>
+              <li>Go back to your browser and refresh the page.</li>
+              <li>Verify that you don't have any errors, and that the default color you have defined in the bean definition has been logged to the console.</li>
+            </ul>
+          </div>
+
+          <h3>Interfaces and Public Wrappers</h3>
+          <p>Let's create an interface for our <code>Shape</code> class definition to implement. This interface will only define one method to return the <code>color</code> property.</p>
+          <div class="step">
+            <h4>step 1</h4>
+            <ul>
+              <li>Create a new file named <code>IShape.js</code>.</li>
+              <li>Write the corresponding interface definition inside the file.</li>
+              <li>Define a property <code>getColor</code> to be part of this interface.</li>
+            </ul>
+            <div class="hints">
+              <p>Declaring interfaces is documented <a href="http://ariatemplates.com/usermanual/latest/around_classes#interface-definition">here</a> in the usermanual.</p>
+            </div>
+          </div>
+          <div class="step">
+            <h4>step 2</h4>
+            <ul>
+              <li>Make sure the <code>Shape</code> class definition implements this interface.</li>
+            </ul>
+            <div class="hints">
+              <p>Using interfaces is documented <a href="http://ariatemplates.com/usermanual/latest/around_classes#interface-implementation">here</a> in the usermanual.</p>
+            </div>
+          </div>
+          <div class="step test">
+            <h4>step 3</h4>
+            <p>To test this step you don't need to change aynthing in your bootsrap.</p>
+            <ul>
+              <li>Go back to your browser, eventually open your browser console if not yet done (hit <code>F12</code>), and refresh the page.</li>
+              <li>Verify that you don't have any loading errors.</li>
+            </ul>
+            <p>Bonus</p>
+            <ul>
+              <li>If you want, you could comment out the <code>getColor()</code> method in the <code>Shape</code> class definition and refresh your page to see the live interface implemetation check.</li>
+              <li>In the console you should find an error telling you that you are missing an implementation for the method.</li>
+            </ul>
+          </div>
+          <div class="step">
+            <h4>step 4</h4>
+            <p>Let's play a bit with interface wrappers, and let's modify a bit the <code>Manager</code> singleton to be able to retrieve a stored shape based upon an index.</p>
+            <ul>
+              <li>Add a <code>getShape()</code> method to the singleton. This method defines as a single argument an index that wil correspond to the index of a shape in the internal array that stores them.</li>
+              <li>Instead of returning the shape instance directly, return an new instance of an <code>interface wrapper</code>.</li>
+            </ul>
+            <div class="hints">
+              <p>Retrieving a default public wrapper from an instance is simple, you can use the <code>$interface</code> method passing as argument the classpath of the wrapping interface.</p>
+              <p>Using interfaces public wrappers is documented <a href="http://ariatemplates.com/usermanual/latest/around_classes#interface-wrapper">here</a> in the usermanual.</p>
+            </div>
+          </div>
+          <div class="step test">
+            <h4>step 5</h4>
+            <ul>
+              <li>Again clear your bootstrap code to only load the Manager singleton, and create a new instance of the class <code>Rectangle</code>.</li>
+              <li>Register this instance onto the manager via <code>addShape</code>, and store the returned index.</li>
+              <li>Call the <code>getShape</code> method with the stored index in order to retrieve the wrapped instance of rectangle.</li>
+              <li>Go back to your browser and refresh the page.</li>
+              <li>Verify that everything works perfectly when you call the <code>getColor</code> method on the retrieved interface wrapper, but that an error will be raised if you call the <code>computeArea</code> method, that is not declared in the interface.</li>
+            </ul>
+          </div>
+
+
+          <h3>Unit Tests</h3>
+          <p>Let's introduce <a href="https://github.com/attester/attester" target="_blank">attester</a> for all Test Driven Development aspects.</p>
+          <p>Let's create a testcase to test the validity of the <code>Square</code> class definition, but first, as a prerequisite, we should install all the needed dependencies. Everything is detailed in this <a href="http://attester.ariatemplates.com/usage/index.html">getting started</a> tutorial.</p>
+          <div class="step">
+            <h4>step 1</h4>
+            <ul>
+              <li>Create a new folder <code>test/</code>.</li>
+              <li>Create a new testcase in the new folder, name it <code>tests/SquareTest.js</code>.</li>
+              <li>Add the <code>Square</code> class definition as a dependency.</li>
+              <li>Define a <code>testGetColor</code> method. Create a new <code>Square</code> instance with no arguments, and assert that the <code>getColor</code> method returns the correct value. Make sure you dispose the created instance, otherwise the test will fail.</li>
+              <li>Define a <code>testComputeArea</code> method. Create a new <code>Square</code> instance, and assert that the <code>computeArea</code> method returns the correct value. Make sure you dispose the created instance, otherwise the test will fail.</li>
+              <li>Create a new test suite, name it <code>tests/TrainingTestSuite.js</code> and add the <code>SquareTest</code> to it.</li>
+            </ul>
+            <div class="hints">
+              <p>All documentation regarding Test Driven Development using Attester and Aria Templates can be found respectively <a href="http://attester.ariatemplates.com">here</a> and <a href="http://ariatemplates.github.io/Test-Driven-Development/">here</a>.</p>
+              <p>In order to run attester, you need to have <a href="http://nodejs.org/">nodejs</a> installed. Notice that attester in not compatible with the latest varsion of nodejs, so you will need to <a href="http://nodejs.org/dist/v0.8.22/">install version 0.8.x</a></p>.
+            </div>
+          </div>
+          <div class="step">
+            <h4>step 2</h4>
+            <p>We now have to create an attester configuration file.</p>
+
+              <p>Create a new file, name it <code>attester.yml</code>. Copy the following configuration inside of it:</p>
+              <pre><code class="html">resources:
+  '/':
+    - ''
+
+tests:
+  aria-templates:
+    # Classpath of test files
+    classpaths:
+      includes:
+        - 'exercises.handson.core.test.TrainingTestSuite'
+
+    # Path of Aria Templates framework
+    bootstrap : 'http://cdn.ariatemplates.com/atlatest.js?root=/'</code></pre>
+          </div>
+          <div class="step test">
+            <h4>step 3</h4>
+            <ul>
+              <li>From the root folder, launch <code>attester exercises/handson/core/test/attester.yml</code> in a command line window. You can then use one the available browsers and add it as a slave by targeting the url specified in the logs of attester in the command line. If you have <a href="http://phantomjs.org/"><code>PhantomJS</code></a> installed, you can automatically instruct attester to use it as a slave in order to run the tests  by adding the parameter <code> --phantomjs-instances 1</code> in the command line.</li>
+              <li>Attester should exit with no errors.</li>
+            </ul>
+          </div>

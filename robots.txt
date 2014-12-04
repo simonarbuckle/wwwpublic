@@ -1,3 +1,2 @@
 User-agent: *
 Disallow: /aria
-Disallow: /usermanual/next/

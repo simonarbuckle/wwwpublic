@@ -1,0 +1,244 @@
+          <h1>Module Controller Exercises</h1>                             
+         
+          <h2>Scope</h2>
+          <p>This hands-on session allows you to practice how to:
+            <ul>
+              <li>create a <code>controller</code>, define and attach its <code>interface</code>,</li>
+              <li>play with <code>filters</code>,</li>
+              <li>glue all that parts together with templates to build your own small and stand alone application,</li>
+              <li>create a of a <code>sub-controller</code>, load it and handle its interaction with the parent controller.</li>
+            </ul>
+          </p>
+          <h2>Let's code !</h2>
+          <h4>Pre-requisites</h4>
+          <ul>
+            <li>Create a <code>todoctrl/</code> folder, located in the <code>/exercises/handson/</code> folder.</li>
+            <li>Copy in this folder the content of what you have produced during the previous <a href="/exercises/e2_templates/">handson session</a>. Copy everything from <code>/exercises/handson/todo/</code> here. <strong>Do not forget to change all classpaths to be matching the new location (in framework related files, but also in the HTML bootstrap)</strong>. We will start from this code base to start implementing all controller features.</li>
+          </ul>
+
+          <h3>Main controller</h3>
+          <div class="step">
+            <h4>step 1</h4>
+            <ul>
+              <li>Create a new controller file, name it <code>TodoCtrl.js</code>.</li>
+              <li>Write the proper <code>classDefinition</code> corresponding to this new module controller.</li>
+            </ul>
+
+            <div class="hints">
+              <p>Documentation about Module Controller can be found <a href="http://ariatemplates.com/usermanual/latest/controllers">here</a> in the usermanual</p>
+              <p>Remember that your controller should extends the controller class provided by the framework <code>aria.templates.ModuleCtrl</code>.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <h4>step 2</h4>
+            <ul>
+              <li>Remove the data model definition from the HTML bootstrap file and initialise it in the <code>init()</code> method of the controller.</li>
+            </ul>
+            <div class="hints">
+              <p>Do not forget the <code>init()</code> method from a controller is providing you 2 arguments in its signature. The second one being the initialization internal callback.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <h4>step 3 - Interface</h4>
+            <ul>
+              <li>Create a new interface to be associated with the newly created controller.</li>
+              <li>Name it <code>ITodoCtrl.js</code>.</li>
+              <li>Write the associated <code>interfaceDefinition</code>.</li>
+            </ul>
+            <div class="hints">
+              <p>Remember that your interface should extends the one provided by the framework <code>aria.templates.IModuleCtrl</code>.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <h4>step 4</h4>
+            <ul>
+              <li>Make sure your module controller class definition implements the newly created interface.</li>
+            </ul>
+            <div class="hints">
+              <p>Documentation about Module Controller interfaces can be found <a href="http://ariatemplates.com/usermanual/latest/controllers">here</a> in the usermanual</p>
+              <p>Do not forget to specify a <code>$publicInterfaceName</code> in your prototype for the framework to know which interface to be use to create the module public wrapper.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <h4>step 5</h4>
+            <ul>
+              <li>Define 2 methods to be part of this interface, <code>addTask()</code> and <code>deleteTask()</code>.</li>
+              <li>Migrate these 2 methods from your template script to be part of your module controller implementation.</li>
+              <li>Update the way the template script click handlers are calling the newly created module controller methods.</li>
+            </ul>
+            <div class="hints">
+              <p>In a controller you'll need to use <code>this.json</code> instead of <code>this.$json</code> (or to avoid confusion you could always use the full path to access <code>aria.utils.Json</code>) and <code>this._data</code> instead of <code>this.data</code>.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <h4>step 6 - Bootstrap</h4>
+            <ul>
+              <li>Update the HTML bootstrap file to reference and load the newly created controller in the <code>loadTemplate()</code> call.</li>
+            </ul>
+          </div>
+
+           <div class="step test">
+            <h4>step 7</h4>
+            <ul>
+              <li>You should be able to go to your browser and hit <code>CTRL+R</code> to reload your page and see your todo list with no errors.</li>
+            </ul>
+          </div>
+
+          <h3>Validation</h3>
+          <div class="step">
+            <h4>step 1</h4>
+            <ul>
+              <li>Improve the <code>addTask()</code> click handler method from your template script by checking that the length of the task label is grater than 0 and smaller or equal than 20.</li>
+              <li>If these conditions are not met, the task does not have to be added and an error message has to be displayed below the text field for the new task.</li>
+            </ul>
+            <div class="hints">
+              <p>You could create a section in the template and a property in the data model that represents the error message to show. Then, simply bind the section to that part of the data model.</p>
+            </div>
+          </div>
+          <div class="step test">
+            <h4>step 2</h4>
+            <ul>
+              <li>Go back to your browser and hit <code>CTRL+R</code> to reload your page.</li>
+              <li>Try to add a new task with an empty label.</li>
+              <li>Verify that the error message is correctly displayed.</li>
+            </ul>
+          </div>
+
+          <h3>Communication with the server</h3>
+          <div class="step">
+            <h4>step 1</h4>
+            <ul>
+              <li>Create a new <code>IOFilter</code> in a folder <code>mocks/</code>, name it <code>Ghost.js</code>.</li>
+              <li>Inherit form the proper framework filter class definition.</li>
+              <li>Implement a <code>onRequest()</code> method, and add the logic to extract the information that are sent along with the request.</li>
+            </ul>
+            <div class="hints">
+              <p>Defining an IOFilter is described in <a href="http://ariatemplates.com/usermanual/latest/modules_filters">this</a> usermanual page.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <h4>step 2</h4>
+            <ul>
+              <li>Register you filter to be loaded from the HTML boostrap file.</li>
+            </ul>
+            <div class="hints">
+              <p>Loading a new filter into the configuration is described <a href="http://ariatemplates.com/usermanual/latest/modules_filters">here</a> in the documentation.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <h4>step 3</h4>
+            <p>The goal here is to retrieve tasks from the server instead of hard-coding them inside the <code>init()</code> method of the module controller.</p>
+            <ul>
+              <li>In order to do so, create a filter and a mock response containing the tasks in JSON format.</li>
+              <li>Create the file <code>tasks.json</code> in the folder <code>mocks/</code>.</li>
+              <li>Simply use the <code>aria.core.IO.asyncRequest()</code> method to perform a POST call that you will intercept in your filter and perform a redirection to newly created mock file.</li>
+            </ul>
+            <div class="hints">
+              <p>Remember that dealing with asynchronous calls to the server implies that you create a couple of methods.</p>
+              <p>For the request with <code>aria.core.IO.asyncRequest()</code> you will find inspiration <a href="/training/t3_appdev/e1_controller/">here</a>. Make sure you set the correct "expectedResponseType".</p>
+            </div>
+          </div>
+
+          <div class="step test">
+            <h4>step 4</h4>
+            <ul>
+              <li>Go back to your browser and hit <code>CTRL+R</code> to reload your page.</li>
+              <li>Everything should be fine.</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <h4>step 5</h4>
+            <ul>
+              <li>Enhance the <code>addTask()</code> method of the todoCtrl to call the server whenever a new task is actually created. The server should respond by either <code>{ 'error': false }</code> or <code>{ 'error': true, 'msg': "Impossible to add the task" }</code> in a random way.</li>
+              <li>In case of error, the task does not have to be added and the error message has to be displayed in the same error section we introduced in the previous <em>Validation</em> section.</li>
+            </ul>
+            <div class="hints">
+              <p>Remember that since <code>addTask()</code> method has now become asynchronous, it is advisable to define a callback as one of the arguments.</p>
+              <p>Generating random number using JavaScript can be achieved using <code>Math.random()</code>. Have a look at this <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">article</a>.</p>
+              <p>This random answer from the server should be implemented in the <code>Ghost</code> filter class definition.</p>
+            </div>
+          </div>
+
+          <div class="step test">
+            <h4>step 6</h4>
+            <ul>
+              <li>Go back to your browser and hit <code>CTRL+R</code> to reload your page.</li>
+              <li>Create tasks to see what happens randomly.</li>
+            </ul>
+          </div>
+
+          <h3>Events</h3>
+          <div class="step">
+            <h4>step 1</h4>
+            <ul>
+              <li>Define an new event to be raised any time the tasks list is being updated. Name it <code>listUpdated</code>.</li>
+              <li>Update you controller <code>addTask()</code> method to actually raise this event.</li>
+            </ul>
+            <div class="hints">
+              <p>Defining events from within an interface is documented <a href="http://ariatemplates.com/usermanual/latest/around_classes">here</a> in the documentation.</p>
+            </div>
+          </div>
+          <div class="step">
+            <h4>step 2</h4>
+            <ul>
+              <li>Wrap the portion of the template that contains the new task TextField and the error message in a new <code>{section}</code>.</li>
+              <li>Use the <code>bindProcessingTo</code> property on the section to display a <em>loading</em> indicator as soon as the <code>addTask()</code> method is executed.</li>
+              <li>Catch the newly <code>listUpdated</code> event to remove the loading indicator.</li>
+              <li>Use the <code>bindProcessingTo</code> property also on the repeater to trigger a <em>loading</em> indicator under the same conditions.</li>
+            </ul>
+            <div class="hints">
+              <p>For <code>{section}</code> statement options, you can look at <a href="http://ariatemplates.com/usermanual/latest/writing_templates#section">this</a> documentation page.</p>
+              <p>To catch a module event, everything is detailed <a href="http://ariatemplates.com/usermanual/latest/template_scripts#reacting-to-module-and-flow-events">here</a></p>
+            </div>
+          </div>
+
+          <div class="step test">
+            <h4>step 3</h4>
+            <ul>
+              <li>Go back to your browser and hit <code>CTRL+R</code> to reload your page.</li>
+              <li>Create tasks and check that the processing indicator is actually displayed.</li>
+            </ul>
+            <div class="hints">
+              <p>To be able to really see it, don't forget you can play with <code>req.delay</code> in your <code>onRequest()</code> IOFilter method. Documentation available <a href="http://ariatemplates.com/usermanual/latest/filters#adding-a-filter-delay">here</a>.</p>
+            </div>
+          </div>
+
+          <h3>Sub-controller</h3>
+          <p>The purpose of this section is to delegate the creation of a new task to a sub-controller, and the corresponding view to another template that will be included in the main <code>Todo</code> template.
+          <div class="step">
+            <h4>step 1 - Controller</h4>
+            <ul>
+              <li>Create a new controller called <code>TaskManager</code> along with its interface <code>ITaskManager</code>.</li>
+              <li>Move to the new controller all the data and methods that deal with the creation of a new task and the associated validation errors. Update the interface accordingly.</li>
+              <li>The <code>TaskManager</code> controller has to raise three events: <code>listUpdated</code> (when the addition of a task ends, whether it is successful or not), <code>listUpdateBegin</code> (when the update process has just started, namely before the call to the server) and <code>taskAdded</code> (when the addition of a task is successful). The latter has a <code>task</code> property which contains the new task to add.</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <h4>step 2</h4>
+            <ul>
+              <li>Update the <code>TodoCtrl</code> controller so that it loads the <code>TaskManager</code> as sub-module in its <code>init()</code> method.</li>
+              <li>Implement the <code>onSubModule</code> method to react to the events raised by the sub-controller. In particular, events <code>listUpdated</code> and <code>listUpdateBegin</code> have to be re-raised, whereas when event <code>taskAdded</code> is intercepted, the new task contained inside of it has to be added to the list of tasks.</li>
+            </ul>
+            <div class="hints">
+              <p>Documentation on sub-modules can be found <a href="http://www.ariatemplates.com/usermanual/latest/using_sub_controllers">here</a>.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <h4>step 3 - Template</h4>
+            <ul>
+              <li>Create a new template called <code>NewTask.tpl</code> inside the view folder.</li>
+              <li>Move all the code that deals with the display of the new task to add and of the validation error to this new template.</li>
+              <li>Include the new template inside the <code>Todo.tpl</code> by using the <a href="http://www.ariatemplates.com/samples/widgets/html/templateinclude/"><code>html:Template</code> widget</a>, by associating to it the instance of <code>TaskManager</code> controller that has been loaded as a sub-module of the main <code>TodoCtrl</code> module.</li>
+              <li>Make sure that all the functionalities continue to work correctly, included the triggering of the loading indicator both on the new task panel, and on the list of tasks (for which you might need to listen to event <code>listUpdateBegin</code>).</li>
+            </ul>
+          </div>

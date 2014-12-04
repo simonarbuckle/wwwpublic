@@ -66,7 +66,7 @@
 
 		<h2>Autocomplete</h2>
 		<div>
-			{@light:AutoComplete {
+			{@light:Autocomplete {
 				id : "ac",
 				resourcesHandler : "app.SampleResourcesHandler",
 				suggestionsTemplate: "atplugins.lightWidgets.autocomplete.AutocompleteTemplate",

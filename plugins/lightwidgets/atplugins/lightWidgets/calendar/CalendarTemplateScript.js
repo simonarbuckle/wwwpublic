@@ -53,7 +53,7 @@
                         this.updateClass(valueInfos.newValuePosition);
                         if (evt.propertyshowShortcuts) {
                             this.$refresh({
-                                section : "selectedDay"
+                                outputSection : "selectedDay"
                             });
                         }
                     } else {

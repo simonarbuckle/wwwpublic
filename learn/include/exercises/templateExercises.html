@@ -1,0 +1,311 @@
+<h1>Template Exercises</h1>                     
+  
+<h2>Scope</h2>
+          <p>This exercise will focus on templates. You will have to create a template file, a template script, an html bootstrap file, and a CSS Template.</p>
+          <p>You should be able to have a clearer vision about how those files can work all together.</p>
+          <p>You will have to use basic statements, as well as some widgets. You will also see how bindings associated to these two notions is easy to implement, and a breathe to benefit from.</p>
+
+          <h2>Let's code!</h2>
+
+          <h4>Pre-requisites</h4>
+          <ul>
+            <li>Create a <code>todo/</code> folder, located in the <code>/exercises/handson/</code> folder. This is where all the code belonging to this hands-on session is going to be written.</li>
+            <li>Copy the <code>index.html</code> that you find in <code>exercises/e2_templates/intialFile</code> inside the newly created folder.</li>
+            <li><a href="http://localhost:8080/exercises/handson/todo/">See what it looks like</a>.</li>
+          </ul>
+
+          <h4>Overview & Context</h4>
+          <p>We are going to code a todo application from scratch. You will be able to create, mark as done and delete tasks.</p>
+
+          <h3>Template</h3>
+          <div class="step">
+            <h4>step 1</h4>
+            <ul>
+              <li>Create a <code>view/</code> folder</li>
+              <li>Create a basic html template file named <code>Todo.tpl</code>. Define the proper classpath declaration along with an empty <code>main()</code> macro.</li>
+            </ul>
+            <div class="hints">
+              <p>Declaration examples can be found <a href="http://ariatemplates.com/usermanual/latest/what_are_templates">here</a></p>
+            </div>
+          </div>
+
+          <div class="step">
+            <h4>step 2</h4>
+            <ul>
+              <li>Fill the content of the macro <code>main()</code> with the inner html of the <code>div</code> with id <code>todo</code> that you find in the <code>index.html</code> file.</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <h4>step 3</h4>
+            <ul>
+              <li>Include the latest version of the framework via <a href="http://cdn.ariatemplates.com" target="_blank">Aria Templates cdn</a>. Remember to enable the debug mode for the framework in order to have a logging that is suitable for the development phase.</li>
+              <li>Load the <code>Todo</code> template inside the <code>div</code> with id <code>todo</code> by using the <a href="http://www.ariatemplates.com/aria/guide/apps/apidocs/#Aria:loadTemplate:method"><code>Aria.loadTemplate</code></a> method.</li>
+            </ul>
+            <div class="hints">
+              <p>Creating a bootstrap html file that include the latest version of the framework is described in the <a href="/exercises/e1_core/">core exercise</a>.</p>
+            </div>
+          </div>
+          <div class="step test">
+            <h4>step 4</h4>
+            <ul>
+              <li>Go back to your browser, open your browser console if not yet done (hit <code>F12</code>), and refresh the page.</li>
+              <li>You should see the to-do list.</li>
+            </ul>
+          </div>
+          <div class="step">
+            <h4>step 5</h4>
+             <ul>
+              <li>Use the <code>{var}</code> statement to create an array containing all the labels of the listed tasks.</li>
+              <li>Update macro <code>main()</code> by using the <code>{foreach}</code> statement to iterate over the tasks instead of hardcoding them in the html.</li>
+            </ul>
+            <div class="hints">
+              <p>You need to use the <code>${expression}</code> notation for labels.</p>
+            </div>
+          </div>
+
+          <div class="step test">
+            <h4>step 6</h4>
+            <ul>
+              <li>Go back to your browser, open your browser console if not yet done (hit <code>F12</code>), and refresh the page.</li>
+              <li>You should see the new dynamic to-do list.</li>
+            </ul>
+          </div>
+
+          <h3>Template Script</h3>
+          <div class="step">
+            <h4>step 1</h4>
+            <ul>
+              <li>Create a basic script template file and associate it with <code>Todo.tpl</code>.</li>
+              <li>Implement a simple <code>markAsDone()</code> method that does an alert()</li>
+            </ul>
+            <div class="hints">
+              <p>Have a look at how Template Scripts are handled <a href="http://ariatemplates.com/usermanual/latest/template_scripts">here</a>.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <h4>step 2</h4>
+            <ul>
+              <li>In the template, replace the <code>&lt;input type="checkbox"/&gt;</code> with an
+                <code>{@aria:CheckBox}</code> widget. The label should display the task and the <code>onchange</code>
+                event handler should call the previously defined <code>markAsDone()</code> method.</li>
+            </ul>
+            <div class="hints">
+              <p>The CheckBox widget documentation can be found <a href="http://www.ariatemplates.com/usermanual/latest/checkbox">here</a>.</p>
+            </div>
+          </div>
+          <div class="step test">
+            <h4>step 3</h4>
+            <ul>
+              <li>Go back to your browser, open your browser console if not yet done (hit <code>F12</code>), and refresh the page.</li>
+              <li>Click on some checkbox to notice the alert.</li>
+            </ul>
+          </div>
+
+
+          <h3>Data Model</h3>
+          <div class="step">
+            <h4>step 1</h4>
+            <ul>
+              <li>Instead of defining the list of tasks in the template, define a data model for the template and inject the list of task in it.</li>
+            </ul>
+          </div>
+          <div class="step">
+            <h4>step 2</h4>
+            <ul>
+              <li>Modify the data model definition so that the the list of tasks array now contains a list of objects
+                with 2 properties. <br />
+                Each object should look like this
+                <pre><code class="javascrip">{ "label": "Buy some milk", "done": false }</code></pre>
+              </li>
+            </ul>
+          </div>
+          <div class="step">
+            <h4>step 3</h4>
+            <ul>
+              <li>Update <code>Todo.tpl</code> to use this new object definition. Use the <code>value</code> property of the configuration of the <code>{@aria:CheckBox}</code> widget in order to initialise it correctly.</li>
+            </ul>
+            <div class="hints">
+              <p>Simply use <code>label</code> and <code>done</code> properties.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <h4>step 4</h4>
+            <ul>
+              <li>It's now time to style the done items in the list. You can use the <code>.done</code> CSS class definition</li>
+              <li>You can use an <code>{if}</code> statement to display differently the tasks for which the <code>done</code>
+                property is set to <code>false</code>.</li>
+            </ul>
+            <div class="hints">
+              <p>Need some info about how to use statements? Look <a href="http://ariatemplates.com/usermanual/latest/writing_templates">here</a>!</p>
+              <p>Think about changing the initial value for one of your tasks in the boostrap html file.</p>
+            </div>
+          </div>
+          <div class="step test">
+            <h4>step 5</h4>
+            <ul>
+              <li>Go back to your browser, open your browser console if not yet done (hit <code>F12</code>), and refresh the page.</li>
+              <li>Verify that everything works.</li>
+            </ul>
+          </div>
+
+          <h3>Refresh</h3>
+          <div class="step">
+            <h4>step 1</h4>
+            <ul>
+              <li>Remove the <code>alert()</code> code from the <code>markAsDone()</code> method.</li>
+              <li>Update it to accept a task object as argument.</li>
+              <li>Then change its <code>done</code> property</li>
+              <li>Refresh the whole template</li>
+            </ul>
+            <div class="hints">
+              <p>Remember that event handler method automatically receive as first argument the event object itself!!</p>
+              <p>To pass arguments to a callback, you need to use the Callback Object Definition <code>{ "fn": ..., "scope": ..., "args": ... }</code>. More info available <a href="http://ariatemplates.com/usermanual/latest/working_in_an_asynchronous_world">here</a>.</p>
+              <p>Full template refresh can be triggered by using <code>this.$refresh()</code> method from within any templates scripts.</p>
+            </div>
+          </div>
+          <div class="step test">
+            <h4>step 2</h4>
+            <ul>
+              <li>Go back to your browser, open your browser console if not yet done (hit <code>F12</code>), and refresh the page.</li>
+              <li>Verify that everything works.</li>
+            </ul>
+          </div>
+
+          <h3>Events</h3>
+          <div class="step">
+            <h4>step 1</h4>
+            <ul>
+              <li>Use the <code>{on}</code> statement to associate the <em>Erase</em> button via a click event to <code>deleteTask</code> method.</li>
+              <li>This method should retrieve, using arguments, the task index in the list.</li>
+              <li>Remove from the list the corresponding task.</li>
+              <li>Refresh the entire template.</li>
+              <li>Make sure that a proper message is displayed to the user if the tasks list is empty.</li>
+            </ul>
+            <div class="hints">
+              <p>Everything related to statements is <a href="http://ariatemplates.com/usermanual/latest/writing_templates">here</a>, for event related statements, like <code>{on}</code> you can also read <a href="http://www.ariatemplates.com/usermanual/latest/dom_events">that</a>.</p>
+              <p>To retrieve the index when iterating over a collection with <code>foreach</code> you can use <code>*_index</code> property. Have a look at the documentation <a href="http://ariatemplates.com/usermanual/latest/writing_templates#foreach">here</a></p>
+              <p>To remove an element from an array you can use <a href="http://www.ariatemplates.com/aria/guide/apps/apidocs/#aria.utils.Json:splice:method"><code>aria.utils.Json.splice()</code></a> method. Remember also that <code>this.$json</code> is a shortcut for <code>aria.utils.Json</code> inside template scripts.</p>
+            </div>
+          </div>
+          <div class="step test">
+            <h4>step 2</h4>
+            <ul>
+              <li>Go back to your browser, open your browser console if not yet done (hit <code>F12</code>), and refresh the page.</li>
+              <li>Verify that everything works.</li>
+            </ul>
+          </div>
+
+          <h3>Bindings</h3>
+          <div class="step">
+            <h4>step 1</h4>
+            <p>Let's introduce bindings and take advantage of them in our template.</p>
+            <ul>
+              <li>Remove the <code>markAsDone()</code> method from your script.</li>
+              <li>Also remove the refresh instruction from your <code>deleteTask()</code> method.</li>
+              <li>Update the <code>{@aria:CheckBox}</code> widget to declare a binding instead of using <code>value</code> and <code>onchange</code> properties.</li>
+            </ul>
+            <div class="hints">
+              <p>You need to define a binding to bind its <code>value</code> to the <code>done</code> property.</p>
+            </div>
+          </div>
+          <div class="step">
+            <h4>step 2</h4>
+            <ul>
+              <li>Surrond the task list itself with a section that should be automagically refreshed whenever a task is modifed.</li>
+            </ul>
+            <div class="hints">
+              <p>Documentation for the <code>section</code> statement can be found <a href="http://ariatemplates.com/usermanual/latest/writing_templates#section">here</a>.</p>
+            </div>
+          </div>
+          <div class="step">
+            <h4>step 3</h4>
+            <ul>
+              <li>Update the <code>deleteTask()</code> method to avoid the explicit call to the <code>$refresh</code> method.</li>
+            </ul>
+            <div class="hints">
+              <p>You need to use a specific method on the <code>aria.utils.Json</code> helper library.</p>
+            </div>
+          </div>
+          <div class="step test">
+            <h4>step 4</h4>
+            <ul>
+              <li>Go back to your browser, open your browser console if not yet done (hit <code>F12</code>), and refresh the page.</li>
+              <li>Verify that everything works.</li>
+            </ul>
+          </div>
+
+          <h3>CSS Template</h3>
+          <div class="step">
+            <h4>step 1</h4>
+            <ul>
+              <li>Create a new CSS Template in the same folder <code>view/</code>, name it <code>TodoStyle.tpl.css</code>.</li>
+              <li>Move the content of your <code>index.html</code> header style node to its <code>main()</code> macro.</li>
+              <li>Associate it to the <code>Todo</code> template.</li>
+            </ul>
+            <div class="hints">
+              <p>Need some help about CSS Templates? Have a look around <a href="http://ariatemplates.com/usermanual/latest/css_templates">here</a>.</p>
+            </div>
+          </div>
+          <div class="step test">
+            <h4>step 2</h4>
+            <ul>
+              <li>Go back to your browser, open your browser console if not yet done (hit <code>F12</code>), and refresh the page.</li>
+              <li>Verify that everything works.</li>
+            </ul>
+          </div>
+
+          <h3>Widgets</h3>
+          <div class="step">
+            <h4>step 1</h4>
+            <ul>
+              <li>Replace the <code>&lt;input type="text"/&gt;</code> used to create a new task with an <code>{@html:TextInput}</code> widget, from library <code>aria.html.HtmlLibrary</code>.</li>
+              <li>Bind its <code>value</code> to the data model</li>
+            </ul>
+            <div class="hints">
+              <p>Make sure that you created an entry in the data model definition in your boostrap html file.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <h4>step 2</h4>
+            <ul>
+              <li>Define an <code>{on}</code> click handler to create a new task based on the <code>{@html:TextInput}</code> value.</li>
+            </ul>
+            <div class="hints">
+              <p>You need to use a specific method on the <code>aria.utils.Json</code> helper library.</p>
+            </div>
+          </div>
+
+          <div class="step test">
+            <h4>step 3</h4>
+            <ul>
+              <li>Go back to your browser, open your browser console if not yet done (hit <code>F12</code>), and refresh the page.</li>
+              <li>Create a new task, verify that everything works.</li>
+            </ul>
+          </div>
+
+          <h3>Refresh Optimization</h3>
+          <div class="step">
+            <p>Optimization for the win, let's introduce the <code>repeater</code> statement!</p>
+            <h4>step 1</h4>
+            <ul>
+              <li>Use a <code>{repeater}</code> statement to display the tasks list and update, remove or add a task. You will also have to modify the method to erase tasks.</li>
+              <li>Update the template so that the "No tasks" warning still appears when the list is empty.</li>
+              <li>Make sure that, when the <code>done</code> property of a task is modified, only the corresponding <code>childSection</code> is refreshed.</li>
+            </ul>
+            <div class="hints">
+              <p>Repeater documentation can be found <a href="http://ariatemplates.com/usermanual/latest/writing_templates#repeater">here</a>.</p>
+              <p>Keep in mind that the <code>childSections</code> property of a repeater is actually a section configuration. As such, it can accept a <code>bindRefreshTo</code> property. All properties under <code>childSections</code> could also be functions that return the expected type of Json configuration object. These functions receive as first argument the item to which each section is linked to.</p>
+            </div>
+          </div>
+          <div class="step test">
+            <h4>step 2</h4>
+            <ul>
+              <li>Go back to your browser, open your browser console if not yet done (hit <code>F12</code>), and refresh the page.</li>
+              <li>Verify that everything works.</li>
+              <li>Use the <code>$afterRefresh</code> method in order to verify that the refresh strategy is correctly implemented. See <a href="http://www.ariatemplates.com/usermanual/latest/template_scripts#intercepting-template-lifecycle-phases">this documentation page</a> to learn about this method.</li>
+            </ul>
+          </div>
